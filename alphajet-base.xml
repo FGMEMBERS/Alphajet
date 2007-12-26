@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <sim include="Nasal/views.xml">
+ 
+  <author>BARANGER Emmanuel</author>
+  <status>alpha</status>
+  
+  <fuel-fraction>1.0</fuel-fraction>
+  
+  <sound>
+    <audible>true</audible>
+    <path>Aircraft/Alphajet/Sounds/alphajet-sound.xml</path>
+  </sound>
+
+  <model>
+   <path>Aircraft/Alphajet/Models/alphajet.xml</path>
+  </model>
+
+  <startup>
+   <splash-texture>Aircraft/Alphajet/alphajet-splash.rgb</splash-texture>
+  </startup>
+
+  <virtual-cockpit archive="y">true</virtual-cockpit>
+
+  <chase-distance-m type="double" archive="y">-30.0</chase-distance-m>
+  
+  <help>
+    <title>Alphajet E</title>
+    <key>
+      <name>d</name>
+      <desc>Open/Close canopy</desc>
+    </key>
+  </help>
+    
+ </sim>
+
+ <consumables>
+   <fuel>
+     <tank n="0">
+       <tank-num type="int">0</tank-num>
+       <level-gal_us archive="y">2070</level-gal_us>
+     </tank>
+   </fuel>
+ </consumables>
+
+ <input>
+   <keyboard include="Nasal/alphajet-keyboard.xml"/>
+ </input>
+ 
+ <nasal>
+   <alphajet>
+     <file>Aircraft/Alphajet/Nasal/doors.nas</file>
+   </alphajet>
+ </nasal>
+
+</PropertyList>

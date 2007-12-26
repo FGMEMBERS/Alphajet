@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<PropertyList include="alphajet-base.xml">
+
+ <sim>
+
+  <description>Dassult/Dornier Alphajet (YASim)</description>
+  <flight-model>yasim</flight-model>
+  <aero>alphajet-yasim</aero>
+
+ </sim>
+
+ <yasim>
+   <alphajet>
+     <pilot-lb>128</pilot-lb>
+   </alphajet>
+ </yasim>
+
+</PropertyList>
+

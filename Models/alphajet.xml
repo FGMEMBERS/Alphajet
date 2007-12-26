@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>alphajet.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>fuselage</object-name>
+    <object-name>interieur</object-name>
+    <object-name>aile</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>voletG</object-name>
+    <object-name>voletD</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>derive</object-name>
+    <object-name>direction</object-name>
+    <object-name>roueA</object-name>
+    <object-name>axeA</object-name>
+    <object-name>roueG</object-name>
+    <object-name>axeG</object-name>
+    <object-name>roueD</object-name>
+    <object-name>axeD</object-name>
+    <object-name>moteur</object-name>
+    <object-name>sortie</object-name>
+    <object-name>ailette</object-name>
+    <object-name>ailette2</object-name>
+    <object-name>ailette3</object-name>
+    <object-name>plaque</object-name>
+    <object-name>reservoir</object-name>
+    <object-name>pilot</object-name>
+    <object-name>copilot</object-name>
+    <object-name>tourverriere</object-name>
+    <object-name>tourverriere1</object-name>
+    <object-name>tourverriere2</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>verriere</object-name>
+    <object-name>verriere1</object-name>
+    <object-name>verriere2</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>verriere</object-name>
+    <object-name>verriere1</object-name>
+    <object-name>verriere2</object-name>
+  </animation>
+
+  <!-- Planche de bord -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -3.914 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.518 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Pilote invisible depuis le cockpit -->
+  <animation>
+    <type>select</type>
+    <object-name>pilot</object-name>
+    <condition>
+      <greater-than>
+        <property>sim/current-view/view-number</property>
+        <value>0</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <!-- Rentré des roues Temporairement disparition/apparition des roues -->
+  <animation>
+    <type>select</type>
+    <object-name>roueA</object-name>
+    <object-name>roueG</object-name>
+    <object-name>roueD</object-name>
+    <object-name>axeA</object-name>
+    <object-name>axeG</object-name>
+    <object-name>axeD</object-name>
+    <condition>
+      <not>
+        <equals>
+          <property>gear/gear[0]/position-norm</property>
+          <value>0</value>
+        </equals>
+      </not>
+    </condition>
+  </animation>
+
+ <!-- Gouverne de profondeur -->
+ <animation>
+  <type>rotate</type>
+  <object-name>profondeur</object-name>
+  <property>controls/flight/elevator</property>
+  <factor>15</factor>
+  <center>
+   <x-m>  4.742 </x-m>
+   <y-m>  0.000 </y-m>
+   <z-m> -0.275 </z-m>
+  </center>
+  <axis>
+   <x> 0.000 </x>
+   <y> 1.000 </y>
+   <z> 0.000 </z>
+  </axis>
+ </animation>
+
+ <!-- Gouverne de direction -->
+ <animation>
+  <type>rotate</type>
+  <object-name>direction</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>30</factor>
+  <axis>
+   <x1-m>  4.772 </x1-m>
+   <y1-m>  0.000 </y1-m>
+   <z1-m> -0.008 </z1-m>
+   <x2-m>  5.632 </x2-m>
+   <y2-m>  0.000 </y2-m>
+   <z2-m>  1.516 </z2-m>
+  </axis>
+ </animation>
+
+ <!-- Animations des ailerons -->
+ <animation>
+  <type>rotate</type>
+  <object-name>aileronG</object-name>
+  <property>surface-positions/left-aileron-pos-norm</property>
+  <factor>-15.0</factor>
+  <axis>
+   <x1-m>  1.728 </x1-m>
+   <y1-m> -3.058 </y1-m>
+   <z1-m> -0.334 </z1-m>
+   <x2-m>  2.213 </x2-m>
+   <y2-m> -4.525 </y2-m>
+   <z2-m> -0.483 </z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>aileronD</object-name>
+  <property>surface-positions/right-aileron-pos-norm</property>
+  <factor>-15.0</factor>
+  <axis>
+   <x1-m>  2.213 </x1-m>
+   <y1-m>  4.525 </y1-m>
+   <z1-m> -0.483 </z1-m>
+   <x2-m>  1.728 </x2-m>
+   <y2-m>  3.058 </y2-m>
+   <z2-m> -0.334 </z2-m>
+  </axis>
+ </animation>
+
+ <!-- Volets -->
+ <animation>
+  <type>rotate</type>
+  <object-name>voletG</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>40.0</factor>
+  <axis>
+   <x1-m>  1.701 </x1-m>
+   <y1-m> -2.679 </y1-m>
+   <z1-m> -0.512 </z1-m>
+   <x2-m>  1.370 </x2-m>
+   <y2-m> -1.662 </y2-m>
+   <z2-m> -0.414 </z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>voletD</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>40.0</factor>
+  <axis>
+   <x1-m>  1.370 </x1-m>
+   <y1-m>  1.662 </y1-m>
+   <z1-m> -0.414 </z1-m>
+   <x2-m>  1.701 </x2-m>
+   <y2-m>  2.679 </y2-m>
+   <z2-m> -0.512 </z2-m>
+  </axis>
+ </animation>
+
+ <!-- Rotation de la roue avant en fonction de la gouverne de direction -->
+ <animation>
+  <type>rotate</type>
+  <object-name>roueA</object-name>
+  <property>controls/flight/rudder</property>
+  <factor> 30.0 </factor>
+  <center>
+   <x-m> -4.289 </x-m>
+   <y-m>  0.112 </y-m>
+   <z-m> -1.849 </z-m>
+  </center>
+  <axis>
+    <x>  0.000 </x>
+    <y>  0.000 </y>
+    <z> -1.000 </z>
+  </axis>
+ </animation>
+
+ <!-- Rotation des roues lors du roulage -->
+ <animation>
+   <type>spin</type>
+   <object-name>roueA</object-name>
+   <property>gear/gear[0]/rollspeed-ms</property>
+   <factor> 30 </factor>
+   <center>
+   <x-m> -4.289 </x-m>
+   <y-m>  0.112 </y-m>
+   <z-m> -1.849 </z-m>
+   </center>
+   <axis>
+     <x>  0.000 </x>
+     <y> -1.000 </y>
+     <z>  0.000 </z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>spin</type>
+   <object-name>roueG</object-name>
+   <property>gear/gear[1]/rollspeed-ms</property>
+   <factor> 30 </factor>
+   <center>
+     <x-m>  0.470 </x-m>
+     <y-m> -1.341 </y-m>
+     <z-m> -1.705 </z-m>
+   </center>
+   <axis>
+     <x>  0.000 </x>
+     <y> -1.000 </y>
+     <z>  0.000 </z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>spin</type>
+   <object-name>roueD</object-name>
+   <property>gear/gear[1]/rollspeed-ms</property>
+   <factor> 30 </factor>
+   <center>
+     <x-m>  0.470 </x-m>
+     <y-m>  1.341 </y-m>
+     <z-m> -1.705 </z-m>
+   </center>
+   <axis>
+     <x>  0.000 </x>
+     <y> -1.000 </y>
+     <z>  0.000 </z>
+   </axis>
+ </animation>
+
+  <!-- Canopy -->
+  <animation>
+    <type>rotate</type>
+    <object-name>tourverriere1</object-name>
+    <object-name>verriere1</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind> 0.00 </ind>
+        <dep> 0.00 </dep>
+      </entry>
+      <entry>
+        <ind>  1.00 </ind>
+        <dep> 76.00 </dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m> -2.387 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.402 </z-m>
+    </center>
+    <axis>
+      <x>  0.00 </x>
+      <y>  1.00 </y>
+      <z>  0.00 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>tourverriere2</object-name>
+    <object-name>verriere2</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind> 0.00 </ind>
+        <dep> 0.00 </dep>
+      </entry>
+      <entry>
+        <ind>  1.00 </ind>
+        <dep> 76.00 </dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m> -0.944 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.410 </z-m>
+    </center>
+    <axis>
+      <x>  0.00 </x>
+      <y>  1.00 </y>
+      <z>  0.00 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

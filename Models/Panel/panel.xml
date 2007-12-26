@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+    <object-name>panelG</object-name>
+    <object-name>panelD</object-name>
+    <object-name>panelC</object-name>
+  </animation>
+
+  <!-- AI -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> -0.038 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.031 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Alt -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.148 </y-m>
+      <z-m> -0.032 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Asi -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.148 </y-m>
+      <z-m> -0.032 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Clock -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Panel/Instruments/clock/clock.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.176 </y-m>
+      <z-m>  0.117 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+</PropertyList>
+
