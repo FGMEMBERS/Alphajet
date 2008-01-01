@@ -5,7 +5,7 @@
 
   <sim>
     <description>Dassault/Dornier Alphajet</description>
-    <author>BARANGER Emmanuel</author>
+    <author>BARANGER Emmanuel (3D), NISHIOKA Tatsuhiro (FDM)</author>
   </sim>
 
 </PropertyList>

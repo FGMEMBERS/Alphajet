@@ -40,7 +40,7 @@
    <fuel>
      <tank n="0">
        <tank-num type="int">0</tank-num>
-       <level-gal_us archive="y">2070</level-gal_us>
+       <level-gal_us archive="y">501</level-gal_us>
      </tank>
    </fuel>
  </consumables>

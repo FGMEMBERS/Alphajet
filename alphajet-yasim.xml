@@ -1,19 +1,23 @@
 <!--  Alphajet E yasim config. d'après celui du A-6E -->
 
-
-<airplane mass="22400">
+<!-- references
+http://www.militaryaviation.eu/trainer/Dornier/Alpha_Jet.htm
+http://www.globalaircraft.org/planes/alpha_jet.pl
+http://www.aviationnow.com/media/pdf/spec_04_gas_turbines.pdf
+-->
+<airplane mass="7377">
 
   <!-- Approach configuration -->
-  <approach speed="120" aoa="8" fuel="0.2">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.5"/>
-    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.5"/>
+  <approach speed="120" aoa="7" fuel="0.3">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.4"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.4"/>
     <control-setting axis="/controls/flight/flaps" value="1.0"/>
     <control-setting axis="/controls/flight/spoilers" value="0.5"/>
     <control-setting axis="/controls/gear/gear-down" value="1"/>
   </approach>
 
   <!-- Cruise configuration -->
-  <cruise speed="480" alt="30000" fuel="0.8">
+  <cruise speed="500" alt="30000" fuel="0.8">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.7"/>
     <control-setting axis="/controls/engines/engine[1]/throttle" value="0.7"/>
     <control-setting axis="/controls/flight/flaps" value="0.0"/>
@@ -22,19 +26,29 @@
 
   <cockpit x="3.249" y="0.0" z="-0.085"/>
 
-  <fuselage ax="6.141" ay="0" az="-1.039" bx="-5.909" by="0" bz="-0.203" width="1.164" taper="1" midpoint="0.5"/>
+  <fuselage ax="6.141" ay="0" az="-1.039" bx="-5.909" by="0" bz="-0.203" width="1.64" taper="0.4" midpoint="0.23" idrag="0.5"/>
 
+<!--
+   properties in wing tag
+   length: length from the mid-chord point of base (not root, I guess) to mid-chord point of tip
+   chord: isn't this a root chord?; I doubt the README.yasim is accurate on this...
+   sweep: sweep angle of the mid-chord line. I measured using your 3D model
+   taper: tip chord / root chord
+   camber: lift at zero aoa / maximum lift at stall aoa;
+           0.02 means the wing generates 50 times grater lift compared to the lift at zero angle
+-->
   <wing x="-0.077" y="0.413" z="-0.010"
-        length="4.300"
-        taper="0.45" 
+        length="4.62"
+        taper="0.45"
         incidence="2.0"
-        chord="2.691" 
-        sweep="20" 
+        chord="2.93"
+        sweep="25"
         dihedral="-6.0"
-        camber="0.02">
+        camber="0.15"
+        idrag="2.5">
     <stall aoa="20" width="3" peak="1.3"/>
     <flap0 start="0" end="0.8" lift="1.5" drag="1.3"/>
-    <flap1 start="0.54" end="0.86" lift="1.3" drag="1.3"/>
+    <flap1 start="0.54" end="0.86" lift="1.3" drag="1.2"/>
 
     <control-input axis="/controls/flight/flaps" control="FLAP0"/>
     <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
@@ -53,20 +67,20 @@
   </wing>
 
   <hstab x="-4.728" y="0.329" z="-0.295"
-        length="1.803"
-        taper="0.62" 
+        length="2.499"
+        taper="0.55" 
         incidence="0.0"
-        chord="1.402" 
-        sweep="20" 
-        dihedral="-8.0">
+        chord="1.59"
+        sweep="32.5"
+        dihedral="-8.0"
+        effectiveness="2.5">
     <stall aoa="25" width="5" peak="1.3"/>
-    <flap0 start="0" end="1" lift="1.35" drag="1.3"/>
+    <flap0 start="0" end="1" lift="1.5" drag="1.7"/>
     
-    <control-input axis="/controls/flight/elevator" control="FLAP0" square="false"/>
+    <control-input axis="/controls/flight/elevator" control="FLAP0" square="false" src0="-0.5" src1="0.5" dst0="-1.0" dst1="1.0"/>
     <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
 
-    <control-output control="FLAP0" side="left" prop="surface-positions/left-elevator-pos-norm"/>
-    <control-output control="FLAP0" side="right" prop="surface-positions/right-elevator-pos-norm"/>
+    <control-output control="FLAP0" prop="surface-positions/left-elevator-pos-norm"/>
     <control-output control="FLAP0" prop="surface-positions/elevator-pos-norm"/>
 
     <control-speed control="FLAP0" transition-time="2"/>
@@ -74,9 +88,9 @@
 
   <vstab x="-4.370" y="0" z="0.42"
          taper="0.31"
-         length="2.130" 
-         chord="1.920" 
-         sweep="16">
+         length="2.130"
+         chord="2.81"
+         sweep="34">
     <stall aoa="16" width="5" peak="1.5"/>
     <flap0 start="0.3" end="0.64" lift="1.25" drag="1.2"/>
 
@@ -89,29 +103,30 @@
   </vstab>
  
   <!-- 2 x J52 P8-A/B -->
-  <jet x="-5.20" y="-0.70" z="-0.33" 
-       mass="2118" 
-       thrust="8660" 
-       tsfc="0.371" 
+  <!-- actual CG of engine should be -2.23, but adjusted to get acceptable CG of entire aircraft -->
+  <jet x="-1.15" y="-0.70" z="-0.93"
+       mass="640"
+       thrust="2980"
+       tsfc="0.71"
        egt="950">
-       <actionpt x="-9.3" y="-1.03" z="-0.37"/>
+       <actionpt x="-1.93" y="-0.64" z="-0.93"/>
        <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
   </jet>
 
-  <jet x="-5.20" y="0.70" z="-0.33" 
-       mass="2118" 
-       thrust="8660" 
-       tsfc="0.371" 
+  <jet x="-1.15" y="0.70" z="-0.93"
+       mass="640"
+       thrust="2980"
+       tsfc="0.71"
        egt="950">
-       <actionpt x="-9.3" y="1.03" z="-0.37"/>
+       <actionpt x="-1.93" y="0.64" z="-0.93"/>
        <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
   </jet>
 
   <!-- nose -->
   <gear x="4.289" y="-0.112" z="-2.067" 
-        retract-time="7" 
-        compression="0.2" 
-        spring="1.1" 
+        retract-time="7"
+        compression="0.2"
+        spring="1.1"
         damp="1.4">
         <control-input axis="/controls/flight/rudder" control="STEER" square="false"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -123,9 +138,9 @@
 
     <!-- left main -->
   <gear x="-0.470" y="1.341" z="-2.010"
-        retract-time="7" 
-        compression="0.2" 
-        spring="0.85" 
+        retract-time="7"
+        compression="0.2"
+        spring="0.85"
         damp="2">
         <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
@@ -140,7 +155,7 @@
   <gear x="-0.470" y="-1.341" z="-2.010"  
         retract-time="7"  
         compression="0.2" 
-        spring="0.85"  
+        spring="0.85"
         damp="2">
         <control-input axis="/controls/gear/brake-right" control="BRAKE"/> 
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
@@ -152,10 +167,16 @@
   </gear>
 
   <!-- Fuselage -->
-  <tank x="2.2" y="0.0" z="0.63" jet="true" capacity="9016"/>	
+  <!-- fuel capacity in pounds; 1520kg=3351lb -->
+  <tank x="2.2" y="0.0" z="-0.63" jet="true" capacity="2351"/>
   <!-- Wing -->
-  <tank x="2.2" y="0.0" z="0.0" jet="true" capacity="6922"/>
 
-  <ballast x="0.116" y="0" z="0" mass="5000"/>
-    
+  <tank x="2.2" y="0.0" z="0.0" jet="true" capacity="1000"/>
+
+  <!-- pilots -->
+  <ballast x="3.28" y="0" z="-0.61" mass="230"/>
+  <ballast x="1.96" y="0" z="-0.38" mass="230"/>
+
+<!-- armament -->
+  <ballast x="2.33" y="0" z="-1.03" mass="190"/>
 </airplane>
