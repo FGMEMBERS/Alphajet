@@ -4,6 +4,15 @@
 
   <path>alphajet.ac</path>
 
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/Alphajet/Models/Liveries", 10);
+    </load>
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>
+
   <animation>
     <!-- Objets opaques -->
     <object-name>fuselage</object-name>
@@ -29,8 +38,6 @@
     <object-name>ailette3</object-name>
     <object-name>plaque</object-name>
     <object-name>reservoir</object-name>
-    <object-name>pilot</object-name>
-    <object-name>copilot</object-name>
     <object-name>tourverriere</object-name>
     <object-name>tourverriere1</object-name>
     <object-name>tourverriere2</object-name>
@@ -48,6 +55,60 @@
     <object-name>verriere2</object-name>
   </animation>
 
+  <animation>
+    <type>material</type>
+    <object-name>fuselage</object-name>
+    <object-name>interieur</object-name>
+    <object-name>aile</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>voletG</object-name>
+    <object-name>voletD</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>derive</object-name>
+    <object-name>direction</object-name>
+    <object-name>roueA</object-name>
+    <object-name>axeA</object-name>
+    <object-name>roueG</object-name>
+    <object-name>axeG</object-name>
+    <object-name>roueD</object-name>
+    <object-name>axeD</object-name>
+    <object-name>moteur</object-name>
+    <object-name>sortie</object-name>
+    <object-name>ailette</object-name>
+    <object-name>ailette2</object-name>
+    <object-name>ailette3</object-name>
+    <object-name>plaque</object-name>
+    <object-name>reservoir</object-name>
+    <object-name>tourverriere</object-name>
+    <object-name>tourverriere1</object-name>
+    <object-name>tourverriere2</object-name>
+
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+  </animation>
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -3.137 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.522 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Copilote -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -1.607 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.300 </z-m>
+    </offsets>
+  </model>
+
   <!-- Planche de bord -->
   <model>
     <path>Aircraft/Alphajet/Models/Panel/panel.xml</path>
@@ -60,18 +121,6 @@
       <heading-deg> 0.000 </heading-deg>
     </offsets>
   </model>
-
-  <!-- Pilote invisible depuis le cockpit -->
-  <animation>
-    <type>select</type>
-    <object-name>pilot</object-name>
-    <condition>
-      <greater-than>
-        <property>sim/current-view/view-number</property>
-        <value>0</value>
-      </greater-than>
-    </condition>
-  </animation>
 
   <!-- Rentré des roues Temporairement disparition/apparition des roues -->
   <animation>

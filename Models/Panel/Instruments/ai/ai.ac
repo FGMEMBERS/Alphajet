@@ -127,7 +127,7 @@ OBJECT poly
 name "AttitudeBall"
 data 8
 Mesh.019
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 45.000000
 numvert 242
@@ -3259,7 +3259,7 @@ OBJECT poly
 name "AttitudeIndicatorFace"
 data 8
 Mesh.020
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 45.000000
 numvert 28
@@ -3465,7 +3465,7 @@ OBJECT poly
 name "Fond"
 data 4
 Fond
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 206
@@ -5705,7 +5705,7 @@ OBJECT poly
 name "visse1"
 data 6
 visse1
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 184
@@ -7891,7 +7891,7 @@ OBJECT poly
 name "visse2"
 data 6
 visse2
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 184
@@ -10077,7 +10077,7 @@ OBJECT poly
 name "visse3"
 data 6
 visse3
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 184
@@ -12263,7 +12263,7 @@ OBJECT poly
 name "visse4"
 data 6
 visse4
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 184
@@ -14449,7 +14449,7 @@ OBJECT poly
 name "vitre"
 data 5
 vitre
-texture "glass.rgb"
+texture "glass.png"
 texrep 1 1
 crease 30.000000
 numvert 290

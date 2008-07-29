@@ -13,7 +13,7 @@ OBJECT poly
 name "Face"
 data 4
 Face
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 17
@@ -136,7 +136,7 @@ OBJECT poly
 name "Fond"
 data 8
 Fond.001
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 213
@@ -2464,7 +2464,7 @@ OBJECT poly
 name "visse1.001"
 data 10
 visse1.002
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 184
@@ -4650,7 +4650,7 @@ OBJECT poly
 name "visse2.001"
 data 10
 visse2.002
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 184
@@ -6836,7 +6836,7 @@ OBJECT poly
 name "visse3.001"
 data 10
 visse3.002
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 184
@@ -9022,7 +9022,7 @@ OBJECT poly
 name "visse4.001"
 data 10
 visse4.002
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 184
@@ -11208,7 +11208,7 @@ OBJECT poly
 name "vitre"
 data 9
 vitre.001
-texture "glass.rgb"
+texture "glass.png"
 texrep 1 1
 crease 30.000000
 numvert 290
