@@ -5,8 +5,8 @@
   <sim>
     <model>
       <livery>
-        <name type="string">Default</name>
-        <texture>texture.png</texture>
+        <name type="string">French Army</name>
+        <texture>Liveries/armee.png</texture>
 <!--
         <diffuse>
           <red>   0.5 </red>
