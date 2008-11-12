@@ -16,7 +16,6 @@
   <animation>
     <!-- Objets opaques -->
     <object-name>fuselage</object-name>
-    <object-name>interieur</object-name>
     <object-name>aile</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
@@ -49,6 +48,15 @@
   </animation>
 
   <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>glass.png</texture>
+    <object-name>verriere</object-name>
+    <object-name>verriere1</object-name>
+    <object-name>verriere2</object-name>
+  </animation>
+
+  <animation>
     <type>noshadow</type>
     <object-name>verriere</object-name>
     <object-name>verriere1</object-name>
@@ -58,7 +66,6 @@
   <animation>
     <type>material</type>
     <object-name>fuselage</object-name>
-    <object-name>interieur</object-name>
     <object-name>aile</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
@@ -118,36 +125,16 @@
 -->
   </animation>
 
-  <!-- Pilote -->
+  <!-- Intérieur -->
   <model>
-    <path>Aircraft/Alphajet/Models/Pilot/pilot.xml</path>
+    <path>Aircraft/Alphajet/Models/Interior/interior.xml</path>
     <offsets>
-      <x-m> -3.137 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -0.522 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Copilote -->
-  <model>
-    <path>Aircraft/Alphajet/Models/Pilot/pilot.xml</path>
-    <offsets>
-      <x-m> -1.607 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -0.300 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Planche de bord -->
-  <model>
-    <path>Aircraft/Alphajet/Models/Panel/panel.xml</path>
-    <offsets>
-      <x-m> -3.914 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -0.518 </z-m>
-      <roll-deg>    0.000 </roll-deg>
-      <pitch-deg>   0.000 </pitch-deg>
-      <heading-deg> 0.000 </heading-deg>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.0 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg>   0.0 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
     </offsets>
   </model>
 
