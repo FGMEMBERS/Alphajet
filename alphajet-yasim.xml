@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--  Alphajet E yasim config. 2008 NISHIOKA Tatsuhiro
                                     BARANGER Emmanuel -->
 
@@ -82,8 +83,8 @@ http://www.aviationnow.com/media/pdf/spec_04_gas_turbines.pdf
          <stall aoa="14" width="5" peak="1.5"/>
          <flap0 start="0.3" end="1" lift="1.25" drag="1.2"/>
 
-         <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
-         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+         <control-input axis="/controls/flight/rudder" control="FLAP0"/>
+         <control-input axis="/controls/flight/rudder-trim" control="FLAP0"/>
 
          <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
 

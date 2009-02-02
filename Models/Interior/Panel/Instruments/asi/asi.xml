@@ -1,17 +1,14 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
   <path>asi.ac</path>
 
   <animation>
-    <object-name>Fond</object-name>
-    <object-name>Face</object-name>
-    <object-name>Needle1</object-name>
-    <object-name>visse1</object-name>
-    <object-name>visse2</object-name>
-    <object-name>visse3</object-name>
-    <object-name>visse4</object-name>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <object-name>bouton</object-name>
 
     <object-name>vitre</object-name>
   </animation>
@@ -24,16 +21,16 @@
   <animation>
     <type>shader</type>
     <shader>chrome</shader>
-    <texture>glass.png</texture>
+    <texture>shader.png</texture>
     <object-name>vitre</object-name>
   </animation>
 
   <animation>
     <type>material</type>
-    <object-name>Face</object-name>
-    <object-name>Needle1</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
     <emission>
-      <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
       <red>   0.50 </red>
       <green> 0.25 </green>
       <blue>  0.25 </blue>
@@ -42,12 +39,18 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>Needle1</object-name>
+    <object-name>needle</object-name>
     <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
     <interpolation>
-      <entry><ind>  0.00 </ind><dep>   0 </dep></entry>
-      <entry><ind> 86.95 </ind><dep>  26 </dep></entry>
-      <entry><ind>608.69 </ind><dep> 334 </dep></entry>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  50 </ind><dep>  10 </dep></entry>
+      <entry><ind> 100 </ind><dep>  63 </dep></entry>
+      <entry><ind> 150 </ind><dep> 119 </dep></entry>
+      <entry><ind> 200 </ind><dep> 163 </dep></entry>
+      <entry><ind> 300 </ind><dep> 228 </dep></entry>
+      <entry><ind> 400 </ind><dep> 280 </dep></entry>
+      <entry><ind> 500 </ind><dep> 320 </dep></entry>
+      <entry><ind> 600 </ind><dep> 353 </dep></entry>
     </interpolation>
     <axis>
       <x> -1 </x>
