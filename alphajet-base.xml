@@ -9,6 +9,12 @@
 
     <fuel-fraction>1.0</fuel-fraction>
 
+    <flaps>
+      <setting>0.00</setting>
+      <setting>0.50</setting>
+      <setting>1.00</setting>
+    </flaps>
+
     <sound>
       <audible>true</audible>
       <path>Aircraft/Alphajet/Sounds/alphajet-sound.xml</path>
@@ -69,6 +75,7 @@
       <file>Aircraft/Alphajet/Nasal/doors.nas</file>
       <file>Aircraft/Alphajet/Nasal/liveries.nas</file>
       <file>Aircraft/Alphajet/Nasal/immat.nas</file>
+      <file>Aircraft/Alphajet/Nasal/light.nas</file>
       <file>Aircraft/Alphajet/Nasal/millibar.nas</file>
     </alphajet>
   </nasal>

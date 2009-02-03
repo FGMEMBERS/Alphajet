@@ -36,7 +36,7 @@ http://www.aviationnow.com/media/pdf/spec_04_gas_turbines.pdf
         taper="0.41"
         sweep="25"
         dihedral="-5.0"
-        camber="0.01">
+        camber="0.096">
         <stall aoa="16" width="3" peak="1.3"/>
         <flap0 start="0.09" end="0.638" lift="1.5" drag="1.3"/>
         <flap1 start="0.638" end="1.0" lift="1.3" drag="1.2"/>
@@ -45,15 +45,13 @@ http://www.aviationnow.com/media/pdf/spec_04_gas_turbines.pdf
         <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
         <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
 
-        <control-output control="FLAP0" side="left" prop="/surface-positions/left-flap-pos-norm"/>
-        <control-output control="FLAP0" side="right" prop="/surface-positions/right-flap-pos-norm"/>
         <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
 
         <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
         <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
         <control-output control="FLAP1" prop="/surface-positions/aileron-pos-norm"/>
 
-        <control-speed control="FLAP0" transition-time="10"/>
+        <control-speed control="FLAP0" transition-time="1"/>
         <control-speed control="FLAP1" transition-time="0.2"/>
   </wing>
 
@@ -63,10 +61,10 @@ http://www.aviationnow.com/media/pdf/spec_04_gas_turbines.pdf
         taper="0.71" 
         sweep="32.5"
         dihedral="-10.0">
-        <stall aoa="16" width="5" peak="1.3"/>
+        <stall aoa="16" width="5" peak="1.4"/>
         <flap0 start="0" end="1" lift="1.5" drag="1.7"/>
-    
-        <control-input axis="/controls/flight/elevator" control="FLAP0" square="false" src0="-0.5" src1="0.5" dst0="-1.0" dst1="1.0"/>
+
+        <control-input axis="/controls/flight/elevator" control="FLAP0"/>
         <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
 
         <control-output control="FLAP0" prop="surface-positions/left-elevator-pos-norm"/>
@@ -90,29 +88,29 @@ http://www.aviationnow.com/media/pdf/spec_04_gas_turbines.pdf
 
          <control-speed control="FLAP0" transition-time="1"/>
   </vstab>
- 
+
   <!-- 2 x J52 P8-A/B -->
   <!-- actual CG of engine should be -2.23, but adjusted to get acceptable CG of entire aircraft -->
-  <jet x="-1.15" y="-0.70" z="-0.93"
-       mass="640"
-       thrust="2980"
-       tsfc="0.71"
-       egt="950">
-       <actionpt x="-1.93" y="-0.64" z="-0.93"/>
-       <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
-  </jet>
-
   <jet x="-1.15" y="0.70" z="-0.93"
        mass="640"
        thrust="2980"
        tsfc="0.71"
        egt="950">
        <actionpt x="-1.93" y="0.64" z="-0.93"/>
+       <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+  </jet>
+
+  <jet x="-1.15" y="-0.70" z="-0.93"
+       mass="640"
+       thrust="2980"
+       tsfc="0.71"
+       egt="950">
+       <actionpt x="-1.93" y="-0.64" z="-0.93"/>
        <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
   </jet>
 
   <!-- nose -->
-  <gear x="4.289" y="-0.112" z="-2.067" 
+  <gear x="4.289" y="-0.112" z="-2.067"
         retract-time="7"
         compression="0.2"
         spring="1.1"
@@ -139,14 +137,14 @@ http://www.aviationnow.com/media/pdf/spec_04_gas_turbines.pdf
 
         <control-speed control="EXTEND" transition-time="7"/>
   </gear>
- 
+
   <!-- right main -->
-  <gear x="-0.470" y="-1.341" z="-2.010"  
-        retract-time="7"  
-        compression="0.2" 
+  <gear x="-0.470" y="-1.341" z="-2.010"
+        retract-time="7"
+        compression="0.2"
         spring="0.85"
         damp="2">
-        <control-input axis="/controls/gear/brake-right" control="BRAKE"/> 
+        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 
@@ -161,8 +159,8 @@ http://www.aviationnow.com/media/pdf/spec_04_gas_turbines.pdf
   <!-- Wing -->
 
   <tank x="2.2" y="0.0" z="0.0" jet="true" capacity="1000"/>
-  
+
   <!-- CG Théorique x=0.034 y=0.0 z=-0.010 -->
-  <ballast x="3.882" y="0.0" z="3.07" mass="1000"/>
+  <ballast x="3.802" y="0.0" z="0.0" mass="1000"/>
 
 </airplane>

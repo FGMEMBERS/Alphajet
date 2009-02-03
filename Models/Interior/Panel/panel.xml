@@ -114,5 +114,18 @@
     </offsets>
   </model>
 
+  <!-- gear -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/gear/gear.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.259 </y-m>
+      <z-m>  0.055 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
 </PropertyList>
 

@@ -6,7 +6,7 @@
 
     <engine>
       <name>engine</name>
-      <path>Sounds/jet.wav</path>
+      <path>Aircraft/Alphajet/Sounds/running.wav</path>
       <mode>looped</mode>
       <condition>
         <property>/engines/engine[0]/running</property>
@@ -41,7 +41,7 @@
 
     <engine>
       <name>engine</name>
-      <path>Sounds/jet.wav</path>
+      <path>Aircraft/Alphajet/Sounds/running.wav</path>
       <mode>looped</mode>
       <condition>
         <property>/engines/engine[1]/running</property>
