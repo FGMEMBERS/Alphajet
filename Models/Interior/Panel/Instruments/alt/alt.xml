@@ -116,16 +116,12 @@
     </axis>
   </animation>
 
-  <!-- Pressure in millibar not work :(
+  <!-- Pressure in millibar -->
   <animation>
     <type>rotate</type>
     <object-name>roue1</object-name>
-    <property>/instrumentation/altimeter/setting-inhg</property>
-    <interpolation>
-      <entry><ind> 28.05 </ind><dep>  950 </dep></entry>
-      <entry><ind> 30.98 </ind><dep> 1049 </dep></entry>
-    </interpolation>
-    <factor>0.1</factor>
+    <property>/instrumentation/altimeter/millibar/unit1</property>
+    <factor>36</factor>
     <center>
       <x-m> -0.015 </x-m>
       <y-m>  0.009 </y-m>
@@ -141,13 +137,8 @@
   <animation>
     <type>rotate</type>
     <object-name>roue2</object-name>
-    <property>/instrumentation/altimeter/setting-inhg</property>
-    <interpolation>
-      <entry><ind> 28.05 </ind><dep>  950 </dep></entry>
-      <entry><ind> 30.98 </ind><dep> 1049 </dep></entry>
-    </interpolation>
-    <factor>0.01</factor>
-    <step>10</step>
+    <property>/instrumentation/altimeter/millibar/unit10</property>
+    <factor>36</factor>
     <center>
       <x-m> -0.015 </x-m>
       <y-m>  0.002 </y-m>
@@ -163,13 +154,8 @@
   <animation>
     <type>rotate</type>
     <object-name>roue3</object-name>
-    <property>/instrumentation/altimeter/setting-inhg</property>
-    <interpolation>
-      <entry><ind> 28.05 </ind><dep>  950 </dep></entry>
-      <entry><ind> 30.98 </ind><dep> 1049 </dep></entry>
-    </interpolation>
-    <factor>0.001</factor>
-    <step>100</step>
+    <property>/instrumentation/altimeter/millibar/unit100</property>
+    <factor>36</factor>
     <center>
       <x-m> -0.015 </x-m>
       <y-m> -0.005 </y-m>
@@ -185,13 +171,8 @@
   <animation>
     <type>rotate</type>
     <object-name>roue4</object-name>
-    <property>/instrumentation/altimeter/setting-inhg</property>
-    <interpolation>
-      <entry><ind> 28.05 </ind><dep>  950 </dep></entry>
-      <entry><ind> 30.98 </ind><dep> 1049 </dep></entry>
-    </interpolation>
-    <factor>0.0001</factor>
-    <step>1000</step>
+    <property>/instrumentation/altimeter/millibar/unit1000</property>
+    <factor>36</factor>
     <center>
       <x-m> -0.015 </x-m>
       <y-m> -0.012 </y-m>
@@ -203,7 +184,6 @@
       <z> 0 </z>
     </axis>
   </animation>
-  -->
 
   <animation>
     <type>pick</type>

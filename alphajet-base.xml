@@ -69,6 +69,7 @@
       <file>Aircraft/Alphajet/Nasal/doors.nas</file>
       <file>Aircraft/Alphajet/Nasal/liveries.nas</file>
       <file>Aircraft/Alphajet/Nasal/immat.nas</file>
+      <file>Aircraft/Alphajet/Nasal/millibar.nas</file>
     </alphajet>
   </nasal>
 
