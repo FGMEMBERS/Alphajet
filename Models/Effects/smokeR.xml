@@ -23,7 +23,7 @@
       <and>
         <property>sim/multiplay/generic/int[6]</property>
         <equals>
-          <property>controls/color</property>
+          <property>sim/multiplay/generic/int[7]</property>
           <value>2</value>
         </equals>
       </and>

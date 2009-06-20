@@ -25,7 +25,7 @@
     <desc>Start smoke</desc>
     <binding>
       <command>property-assign</command>
-      <property>controls/smoke</property>
+      <property>sim/multiplay/generic/int[6]</property>
       <value>true</value>
     </binding>
   </key>
@@ -35,7 +35,7 @@
     <desc>Stop smoke</desc>
     <binding>
       <command>property-assign</command>
-      <property>controls/smoke</property>
+      <property>sim/multiplay/generic/int[6]</property>
       <value>false</value>
     </binding>
   </key>

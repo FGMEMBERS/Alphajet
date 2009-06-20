@@ -61,7 +61,7 @@ http://www.aviationnow.com/media/pdf/spec_04_gas_turbines.pdf
         taper="0.71" 
         sweep="32.5"
         dihedral="-10.0">
-        <stall aoa="16" width="5" peak="1.4"/>
+        <stall aoa="16" width="7" peak="1.4"/>
         <flap0 start="0" end="1" lift="1.5" drag="1.7"/>
 
         <control-input axis="/controls/flight/elevator" control="FLAP0"/>

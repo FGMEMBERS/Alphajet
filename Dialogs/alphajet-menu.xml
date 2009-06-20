@@ -18,7 +18,7 @@
         <binding>
           <command>nasal</command>
           <script>
-            var p = "controls/color";
+            var p = "sim/multiplay/generic/int[7]";
             setprop(p, 0);
           </script>
         </binding>
@@ -28,7 +28,7 @@
         <binding>
           <command>nasal</command>
           <script>
-            var p = "controls/color";
+            var p = "sim/multiplay/generic/int[7]";
             setprop(p, 1);
           </script>
         </binding>
@@ -38,7 +38,7 @@
         <binding>
           <command>nasal</command>
           <script>
-            var p = "controls/color";
+            var p = "sim/multiplay/generic/int[7]";
             setprop(p, 2);
           </script>
         </binding>
