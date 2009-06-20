@@ -131,6 +131,43 @@
 -->
   </animation>
 
+  <!-- Particules pour OSG -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Effects/smokeB.xml</path>
+    <offsets>
+      <x-m>  0.756 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.383 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Alphajet/Models/Effects/smokeW.xml</path>
+    <offsets>
+      <x-m>  0.756 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.383 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Alphajet/Models/Effects/smokeR.xml</path>
+    <offsets>
+      <x-m>  0.756 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.383 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
   <!-- Intérieur -->
   <model>
     <path>Aircraft/Alphajet/Models/Interior/interior.xml</path>

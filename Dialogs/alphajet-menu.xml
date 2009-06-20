@@ -14,6 +14,36 @@
         </binding>
       </item>
       <item>
+        <label>Blue smoke</label>
+        <binding>
+          <command>nasal</command>
+          <script>
+            var p = "controls/color";
+            setprop(p, 0);
+          </script>
+        </binding>
+      </item>
+      <item>
+        <label>White smoke</label>
+        <binding>
+          <command>nasal</command>
+          <script>
+            var p = "controls/color";
+            setprop(p, 1);
+          </script>
+        </binding>
+      </item>
+      <item>
+        <label>Red smoke</label>
+        <binding>
+          <command>nasal</command>
+          <script>
+            var p = "controls/color";
+            setprop(p, 2);
+          </script>
+        </binding>
+      </item>
+      <item>
         <label>Immatriculation</label>
         <binding>
           <command>nasal</command>

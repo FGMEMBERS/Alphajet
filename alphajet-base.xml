@@ -51,6 +51,14 @@
         <name>d</name>
         <desc>Open/Close canopy</desc>
       </key>
+      <key>
+        <name>S</name>
+        <desc>Start smoke</desc>
+      </key>
+      <key>
+        <name>u</name>
+        <desc>Stop smoke</desc>
+      </key>
     </help>
 
     <menubar include="Dialogs/alphajet-menu.xml"/>
@@ -70,6 +78,11 @@
     <keyboard include="Nasal/alphajet-keyboard.xml"/>
   </input>
  
+  <controls>
+    <smoke alias="/sim/multiplay/generic/int[6]"/>
+    <color type="int" alias="/sim/multiplay/generic/int[7]">0</color>
+  </controls>
+  
   <nasal>
     <alphajet>
       <file>Aircraft/Alphajet/Nasal/doors.nas</file>
