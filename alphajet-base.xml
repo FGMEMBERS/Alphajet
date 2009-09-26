@@ -85,6 +85,15 @@
     <color type="int" alias="/sim/multiplay/generic/int[7]">0</color>
   </controls>
   
+  <instrumentation>
+    <kcs55 include="Models/Interior/Panel/Instruments/kcs55/kcs55.xml"/>
+    <kcs55 n="0">
+    <ka51>
+      <slaved>true</slaved>
+    </ka51>
+    </kcs55>
+  </instrumentation>
+ 
   <nasal>
     <alphajet>
       <file>Aircraft/Alphajet/Nasal/doors.nas</file>
@@ -92,6 +101,10 @@
       <file>Aircraft/Alphajet/Nasal/immat.nas</file>
       <file>Aircraft/Alphajet/Nasal/light.nas</file>
       <file>Aircraft/Alphajet/Nasal/millibar.nas</file>
+      <file>Aircraft/Alphajet/Models/Interior/Panel/Instruments/kcs55/kcs55.nas</file>
+            <script><![CDATA[
+              KCS55.new();
+            ]]></script>
     </alphajet>
   </nasal>
 

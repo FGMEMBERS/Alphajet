@@ -156,9 +156,6 @@ http://www.aviationnow.com/media/pdf/spec_04_gas_turbines.pdf
   <!-- Fuselage -->
   <!-- fuel capacity in pounds; 1520kg=3351lb -->
   <tank x="2.2" y="0.0" z="-0.63" jet="true" capacity="2351"/>
-  <!-- Wing -->
-
-  <tank x="2.2" y="0.0" z="0.0" jet="true" capacity="1000"/>
 
   <!-- CG Théorique x=0.034 y=0.0 z=-0.010 -->
   <ballast x="3.802" y="0.0" z="0.0" mass="1000"/>

@@ -172,12 +172,12 @@
   <model>
     <path>Aircraft/Alphajet/Models/Interior/interior.xml</path>
     <offsets>
-      <x-m> 0.0 </x-m>
-      <y-m> 0.0 </y-m>
-      <z-m> 0.0 </z-m>
-      <roll-deg>    0.0 </roll-deg>
-      <pitch-deg>   0.0 </pitch-deg>
-      <heading-deg> 0.0 </heading-deg>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -194,177 +194,177 @@
       <not>
         <equals>
           <property>gear/gear[0]/position-norm</property>
-          <value>0</value>
+          <value> 0 </value>
         </equals>
       </not>
     </condition>
   </animation>
 
- <!-- Gouverne de profondeur -->
- <animation>
-  <type>rotate</type>
-  <object-name>profondeur</object-name>
-  <property>controls/flight/elevator</property>
-  <factor>15</factor>
-  <center>
-   <x-m>  4.742 </x-m>
-   <y-m>  0.000 </y-m>
-   <z-m> -0.275 </z-m>
-  </center>
-  <axis>
-   <x> 0.000 </x>
-   <y> 1.000 </y>
-   <z> 0.000 </z>
-  </axis>
- </animation>
+  <!-- Gouverne de profondeur -->
+  <animation>
+    <type>rotate</type>
+    <object-name>profondeur</object-name>
+    <property>controls/flight/elevator</property>
+    <factor>15</factor>
+    <center>
+      <x-m>  4.742 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.275 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
 
- <!-- Gouverne de direction -->
- <animation>
-  <type>rotate</type>
-  <object-name>direction</object-name>
-  <property>controls/flight/rudder</property>
-  <factor>30</factor>
-  <axis>
-   <x1-m>  4.772 </x1-m>
-   <y1-m>  0.000 </y1-m>
-   <z1-m> -0.008 </z1-m>
-   <x2-m>  5.632 </x2-m>
-   <y2-m>  0.000 </y2-m>
-   <z2-m>  1.516 </z2-m>
-  </axis>
- </animation>
+  <!-- Gouverne de direction -->
+  <animation>
+    <type>rotate</type>
+    <object-name>direction</object-name>
+    <property>controls/flight/rudder</property>
+    <factor> 30 </factor>
+    <axis>
+      <x1-m>  4.772 </x1-m>
+      <y1-m>  0.000 </y1-m>
+      <z1-m> -0.008 </z1-m>
+      <x2-m>  5.632 </x2-m>
+      <y2-m>  0.000 </y2-m>
+      <z2-m>  1.516 </z2-m>
+    </axis>
+  </animation>
 
- <!-- Animations des ailerons -->
- <animation>
-  <type>rotate</type>
-  <object-name>aileronG</object-name>
-  <property>surface-positions/left-aileron-pos-norm</property>
-  <factor>-15.0</factor>
-  <axis>
-   <x1-m>  1.728 </x1-m>
-   <y1-m> -3.058 </y1-m>
-   <z1-m> -0.334 </z1-m>
-   <x2-m>  2.213 </x2-m>
-   <y2-m> -4.525 </y2-m>
-   <z2-m> -0.483 </z2-m>
-  </axis>
- </animation>
+  <!-- Animations des ailerons -->
+  <animation>
+    <type>rotate</type>
+    <object-name>aileronG</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> -15 </factor>
+    <axis>
+     <x1-m>  1.728 </x1-m>
+     <y1-m> -3.058 </y1-m>
+     <z1-m> -0.334 </z1-m>
+     <x2-m>  2.213 </x2-m>
+     <y2-m> -4.525 </y2-m>
+     <z2-m> -0.483 </z2-m>
+    </axis>
+  </animation>
 
- <animation>
-  <type>rotate</type>
-  <object-name>aileronD</object-name>
-  <property>surface-positions/right-aileron-pos-norm</property>
-  <factor>-15.0</factor>
-  <axis>
-   <x1-m>  2.213 </x1-m>
-   <y1-m>  4.525 </y1-m>
-   <z1-m> -0.483 </z1-m>
-   <x2-m>  1.728 </x2-m>
-   <y2-m>  3.058 </y2-m>
-   <z2-m> -0.334 </z2-m>
-  </axis>
- </animation>
-
- <!-- Volets -->
- <animation>
-  <type>rotate</type>
-  <object-name>voletG</object-name>
-  <property>surface-positions/flap-pos-norm</property>
-  <factor>40.0</factor>
-  <axis>
-   <x1-m>  1.701 </x1-m>
-   <y1-m> -2.679 </y1-m>
-   <z1-m> -0.512 </z1-m>
-   <x2-m>  1.370 </x2-m>
-   <y2-m> -1.662 </y2-m>
-   <z2-m> -0.414 </z2-m>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>voletD</object-name>
-  <property>surface-positions/flap-pos-norm</property>
-  <factor>40.0</factor>
-  <axis>
-   <x1-m>  1.370 </x1-m>
-   <y1-m>  1.662 </y1-m>
-   <z1-m> -0.414 </z1-m>
-   <x2-m>  1.701 </x2-m>
-   <y2-m>  2.679 </y2-m>
-   <z2-m> -0.512 </z2-m>
-  </axis>
- </animation>
-
- <!-- Rotation de la roue avant en fonction de la gouverne de direction -->
- <animation>
-  <type>rotate</type>
-  <object-name>roueA</object-name>
-  <property>controls/flight/rudder</property>
-  <factor> 30.0 </factor>
-  <center>
-   <x-m> -4.289 </x-m>
-   <y-m>  0.112 </y-m>
-   <z-m> -1.849 </z-m>
-  </center>
-  <axis>
-    <x>  0.000 </x>
-    <y>  0.000 </y>
-    <z> -1.000 </z>
-  </axis>
- </animation>
-
- <!-- Rotation des roues lors du roulage -->
- <animation>
-   <type>spin</type>
-   <object-name>roueA</object-name>
-   <property>gear/gear[0]/rollspeed-ms</property>
-   <factor> 30 </factor>
-   <center>
-   <x-m> -4.289 </x-m>
-   <y-m>  0.112 </y-m>
-   <z-m> -1.849 </z-m>
-   </center>
+  <animation>
+   <type>rotate</type>
+   <object-name>aileronD</object-name>
+   <property>surface-positions/right-aileron-pos-norm</property>
+   <factor> -15 </factor>
    <axis>
-     <x>  0.000 </x>
-     <y> -1.000 </y>
-     <z>  0.000 </z>
+    <x1-m>  2.213 </x1-m>
+    <y1-m>  4.525 </y1-m>
+    <z1-m> -0.483 </z1-m>
+    <x2-m>  1.728 </x2-m>
+    <y2-m>  3.058 </y2-m>
+    <z2-m> -0.334 </z2-m>
    </axis>
- </animation>
+  </animation>
 
- <animation>
-   <type>spin</type>
-   <object-name>roueG</object-name>
-   <property>gear/gear[1]/rollspeed-ms</property>
-   <factor> 30 </factor>
-   <center>
-     <x-m>  0.470 </x-m>
-     <y-m> -1.341 </y-m>
-     <z-m> -1.705 </z-m>
-   </center>
-   <axis>
-     <x>  0.000 </x>
-     <y> -1.000 </y>
-     <z>  0.000 </z>
-   </axis>
- </animation>
+  <!-- Volets -->
+  <animation>
+    <type>rotate</type>
+    <object-name>voletG</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor> 40 </factor>
+    <axis>
+      <x1-m>  1.701 </x1-m>
+      <y1-m> -2.679 </y1-m>
+      <z1-m> -0.512 </z1-m>
+      <x2-m>  1.370 </x2-m>
+      <y2-m> -1.662 </y2-m>
+      <z2-m> -0.414 </z2-m>
+    </axis>
+  </animation>
 
- <animation>
-   <type>spin</type>
-   <object-name>roueD</object-name>
-   <property>gear/gear[1]/rollspeed-ms</property>
-   <factor> 30 </factor>
-   <center>
-     <x-m>  0.470 </x-m>
-     <y-m>  1.341 </y-m>
-     <z-m> -1.705 </z-m>
-   </center>
-   <axis>
-     <x>  0.000 </x>
-     <y> -1.000 </y>
-     <z>  0.000 </z>
-   </axis>
- </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>voletD</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor> 40 </factor>
+    <axis>
+      <x1-m>  1.370 </x1-m>
+      <y1-m>  1.662 </y1-m>
+      <z1-m> -0.414 </z1-m>
+      <x2-m>  1.701 </x2-m>
+      <y2-m>  2.679 </y2-m>
+      <z2-m> -0.512 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Rotation de la roue avant en fonction de la gouverne de direction -->
+  <animation>
+    <type>rotate</type>
+    <object-name>roueA</object-name>
+    <property>controls/flight/rudder</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -4.289 </x-m>
+      <y-m>  0.112 </y-m>
+      <z-m> -1.849 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+  <!-- Rotation des roues lors du roulage -->
+  <animation>
+    <type>spin</type>
+    <object-name>roueA</object-name>
+    <property>gear/gear[0]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -4.289 </x-m>
+      <y-m>  0.112 </y-m>
+      <z-m> -1.849 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>roueG</object-name>
+    <property>gear/gear[1]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m>  0.470 </x-m>
+      <y-m> -1.341 </y-m>
+      <z-m> -1.705 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>roueD</object-name>
+    <property>gear/gear[1]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m>  0.470 </x-m>
+      <y-m>  1.341 </y-m>
+      <z-m> -1.705 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
 
   <!-- Canopy -->
   <animation>
@@ -373,14 +373,8 @@
     <object-name>verriere1</object-name>
     <property>instrumentation/doors/crew/position-norm</property>
     <interpolation>
-      <entry>
-        <ind> 0.00 </ind>
-        <dep> 0.00 </dep>
-      </entry>
-      <entry>
-        <ind>  1.00 </ind>
-        <dep> 76.00 </dep>
-      </entry>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 76 </dep></entry>
     </interpolation>
     <center>
       <x-m> -2.387 </x-m>
@@ -388,9 +382,9 @@
       <z-m>  0.402 </z-m>
     </center>
     <axis>
-      <x>  0.00 </x>
-      <y>  1.00 </y>
-      <z>  0.00 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -400,14 +394,8 @@
     <object-name>verriere2</object-name>
     <property>instrumentation/doors/crew/position-norm</property>
     <interpolation>
-      <entry>
-        <ind> 0.00 </ind>
-        <dep> 0.00 </dep>
-      </entry>
-      <entry>
-        <ind>  1.00 </ind>
-        <dep> 76.00 </dep>
-      </entry>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 76 </dep></entry>
     </interpolation>
     <center>
       <x-m> -0.944 </x-m>
@@ -415,9 +403,9 @@
       <z-m>  0.410 </z-m>
     </center>
     <axis>
-      <x>  0.00 </x>
-      <y>  1.00 </y>
-      <z>  0.00 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
