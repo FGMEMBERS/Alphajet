@@ -14,6 +14,13 @@
         </binding>
       </item>
       <item>
+        <label>Show/hide color tank</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>/sim/model/hide-yoke</property>
+        </binding>
+      </item>
+      <item>
         <label>Blue smoke</label>
         <binding>
           <command>nasal</command>

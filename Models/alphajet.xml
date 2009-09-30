@@ -39,9 +39,11 @@
     <object-name>ailette3</object-name>
     <object-name>plaque</object-name>
     <object-name>reservoir</object-name>
+    <object-name>tuyeaux</object-name>
     <object-name>tourverriere</object-name>
     <object-name>tourverriere1</object-name>
     <object-name>tourverriere2</object-name>
+    <object-name>supportslampes</object-name>
     <object-name>trous</object-name>
 
     <!-- Objets transparents -->
@@ -50,6 +52,8 @@
     <object-name>verriere2</object-name>
     <object-name>lampeR</object-name>
     <object-name>lampeV</object-name>
+    <object-name>lampesC</object-name>
+    <object-name>lampenoze</object-name>
   </animation>
 
   <animation>
@@ -59,8 +63,6 @@
     <object-name>verriere</object-name>
     <object-name>verriere1</object-name>
     <object-name>verriere2</object-name>
-    <object-name>lampeR</object-name>
-    <object-name>lampeV</object-name>
   </animation>
 
   <animation>
@@ -70,6 +72,8 @@
     <object-name>verriere2</object-name>
     <object-name>lampeR</object-name>
     <object-name>lampeV</object-name>
+    <object-name>lampesC</object-name>
+    <object-name>lampenoze</object-name>
   </animation>
 
   <animation>
@@ -98,9 +102,11 @@
     <object-name>ailette3</object-name>
     <object-name>plaque</object-name>
     <object-name>reservoir</object-name>
+    <object-name>tuyeaux</object-name>
     <object-name>tourverriere</object-name>
     <object-name>tourverriere1</object-name>
     <object-name>tourverriere2</object-name>
+    <object-name>supportslampes</object-name>
     <object-name>trous</object-name>
 
     <property-base>sim/model/livery</property-base>
@@ -137,13 +143,24 @@
 -->
   </animation>
 
+  <animation>
+    <type>select</type>
+    <object-name>reservoir</object-name>
+    <object-name>tuyeaux</object-name>
+    <condition>
+      <not>
+        <property>sim/model/hide-yoke</property>
+      </not>
+    </condition>
+  </animation>
+
   <!-- Particules pour OSG -->
   <model>
     <path>Aircraft/Alphajet/Models/Effects/smokeB.xml</path>
     <offsets>
-      <x-m>  0.756 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -1.383 </z-m>
+      <x-m>  3.025 </x-m>
+      <y-m> -0.641 </y-m>
+      <z-m> -0.923 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg>   0 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -153,9 +170,9 @@
   <model>
     <path>Aircraft/Alphajet/Models/Effects/smokeW.xml</path>
     <offsets>
-      <x-m>  0.756 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -1.383 </z-m>
+      <x-m>  3.025 </x-m>
+      <y-m> -0.641 </y-m>
+      <z-m> -0.923 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg>   0 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -165,9 +182,9 @@
   <model>
     <path>Aircraft/Alphajet/Models/Effects/smokeR.xml</path>
     <offsets>
-      <x-m>  0.756 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -1.383 </z-m>
+      <x-m>  3.025 </x-m>
+      <y-m> -0.641 </y-m>
+      <z-m> -0.923 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg>   0 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -448,11 +465,29 @@
 
   <!-- Effets lumineux -->
   <model>
+    <path>Aircraft/Alphajet/Models/light/Whitelight.xml</path>
+    <offsets>
+      <x-m> -6.122 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.095 </z-m>
+    </offsets>
+  </model>
+
+  <model>
     <path>Aircraft/Alphajet/Models/light/beacon.xml</path>
     <offsets>
-      <x-m> 2.243 </x-m>
+      <x-m> 2.829 </x-m>
       <y-m> 0.000 </y-m>
-      <z-m> 0.190 </z-m>
+      <z-m> 0.261 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Alphajet/Models/light/beacon.xml</path>
+    <offsets>
+      <x-m> 1.185 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.330 </z-m>
     </offsets>
   </model>
 

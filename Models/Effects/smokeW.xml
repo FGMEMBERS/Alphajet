@@ -26,6 +26,9 @@
           <property>sim/multiplay/generic/int[7]</property>
           <value>1</value>
         </equals>
+        <not>
+          <property>sim/model/hide-yoke</property>
+        </not>
       </and>
     </condition>
 

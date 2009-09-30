@@ -10,6 +10,9 @@
     <object-name>inttourverriere</object-name>
     <object-name>inttourverriere1</object-name>
     <object-name>inttourverriere2</object-name>
+    <object-name>separation</object-name>
+    <object-name>retrosarrieres</object-name>
+    <object-name>retrosavants</object-name>
 
     <!-- Objets transparents -->
     <object-name>intverriere</object-name>
