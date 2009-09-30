@@ -25,7 +25,9 @@
     <object-name>derive</object-name>
     <object-name>direction</object-name>
     <object-name>roueA</object-name>
-    <object-name>axeA</object-name>
+    <object-name>axeAH</object-name>
+    <object-name>axeAB</object-name>
+    <object-name>verinA</object-name>
     <object-name>roueG</object-name>
     <object-name>axeG</object-name>
     <object-name>roueD</object-name>
@@ -40,6 +42,7 @@
     <object-name>tourverriere</object-name>
     <object-name>tourverriere1</object-name>
     <object-name>tourverriere2</object-name>
+    <object-name>trous</object-name>
 
     <!-- Objets transparents -->
     <object-name>verriere</object-name>
@@ -81,7 +84,9 @@
     <object-name>derive</object-name>
     <object-name>direction</object-name>
     <object-name>roueA</object-name>
-    <object-name>axeA</object-name>
+    <object-name>axeAH</object-name>
+    <object-name>axeAB</object-name>
+    <object-name>verinA</object-name>
     <object-name>roueG</object-name>
     <object-name>axeG</object-name>
     <object-name>roueD</object-name>
@@ -96,6 +101,7 @@
     <object-name>tourverriere</object-name>
     <object-name>tourverriere1</object-name>
     <object-name>tourverriere2</object-name>
+    <object-name>trous</object-name>
 
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
@@ -187,7 +193,9 @@
     <object-name>roueA</object-name>
     <object-name>roueG</object-name>
     <object-name>roueD</object-name>
-    <object-name>axeA</object-name>
+    <object-name>axeAH</object-name>
+    <object-name>axeAB</object-name>
+    <object-name>verinA</object-name>
     <object-name>axeG</object-name>
     <object-name>axeD</object-name>
     <condition>
@@ -198,6 +206,35 @@
         </equals>
       </not>
     </condition>
+  </animation>
+
+  <!-- Rentré des roues -->
+  <animation>
+    <name>TrainAvant</name>
+    <object-name>roueA</object-name>
+    <object-name>axeAH</object-name>
+    <object-name>axeAB</object-name>
+    <object-name>verinA</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainAvant</object-name>
+    <property>/gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep> 94 </dep></entry>
+      <entry><ind> 1.0 </ind><dep>  0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -4.473 </x-m>
+      <y-m>  0.100 </y-m>
+      <z-m> -0.936 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
   </animation>
 
   <!-- Gouverne de profondeur -->
@@ -299,13 +336,13 @@
   <!-- Rotation de la roue avant en fonction de la gouverne de direction -->
   <animation>
     <type>rotate</type>
-    <object-name>roueA</object-name>
+    <object-name>TrainAvant</object-name>
     <property>/surface-positions/rudder-pos-norm</property>
     <factor> 30 </factor>
     <center>
-      <x-m> -4.289 </x-m>
-      <y-m>  0.112 </y-m>
-      <z-m> -1.849 </z-m>
+      <x-m> -4.473 </x-m>
+      <y-m>  0.100 </y-m>
+      <z-m> -0.936 </z-m>
     </center>
     <axis>
       <x> 0 </x>
