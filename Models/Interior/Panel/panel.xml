@@ -258,5 +258,18 @@
     </offsets>
   </model>
 
+  <!-- uhf-box -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/uhf-box/uhf-box.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.257 </y-m>
+      <z-m> -0.160 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
 </PropertyList>
 
