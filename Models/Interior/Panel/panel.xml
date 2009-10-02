@@ -284,5 +284,18 @@
     </offsets>
   </model>
 
+  <!-- warning -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/warning/warning.xml</path>
+    <offsets>
+      <x-m>  0.018 </x-m>
+      <y-m>  0.376 </y-m>
+      <z-m> -0.290 </z-m>
+      <roll-deg>     0 </roll-deg>
+      <pitch-deg>   -8 </pitch-deg>
+      <heading-deg>  0 </heading-deg>
+    </offsets>
+  </model>
+
 </PropertyList>
 
