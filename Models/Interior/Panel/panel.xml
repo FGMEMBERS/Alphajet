@@ -271,5 +271,18 @@
     </offsets>
   </model>
 
+  <!-- throttle -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/throttle/throttle.xml</path>
+    <offsets>
+      <x-m>  0.551 </x-m>
+      <y-m> -0.427 </y-m>
+      <z-m> -0.332 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
 </PropertyList>
 
