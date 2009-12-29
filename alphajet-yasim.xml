@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--  Alphajet E yasim config. 2008 NISHIOKA Tatsuhiro
-                                    BARANGER Emmanuel -->
 
-<!-- references
-http://www.militaryaviation.eu/trainer/Dornier/Alpha_Jet.htm
-http://www.globalaircraft.org/planes/alpha_jet.pl
-http://www.aviationnow.com/media/pdf/spec_04_gas_turbines.pdf
--->
+  <!--  Alphajet E yasim config. 2008 NISHIOKA Tatsuhiro
+                                      BARANGER Emmanuel
+        updated with Melchior Script 29-12-2009          -->
+
+  <!-- references
+  http://www.militaryaviation.eu/trainer/Dornier/Alpha_Jet.htm
+  http://www.globalaircraft.org/planes/alpha_jet.pl
+  http://www.aviationnow.com/media/pdf/spec_04_gas_turbines.pdf
+  -->
 <airplane mass="7377">
 
   <!-- Approach configuration -->
@@ -28,18 +30,22 @@ http://www.aviationnow.com/media/pdf/spec_04_gas_turbines.pdf
 
   <cockpit x="3.249" y="0.0" z="-0.085"/>
 
-  <fuselage ax="6.141" ay="0" az="-1.039" bx="-5.909" by="0" bz="-0.203" width="1.64" taper="0.4" midpoint="0.23" idrag="0.5"/>
+  <fuselage ax="6.141" ay="0" az="-1.039" bx="-5.909" by="0" bz="-0.203" width="1" taper="0.4" midpoint="0.23" idrag="0.5"/>
+
+  <fuselage ax="1.880" ay="0.64" az="-0.854" bx="-2.845" by="0.64" bz="-0.93" width="0.7" taper="0.7" midpoint="0.1"/>
+
+  <fuselage ax="1.880" ay="-0.64" az="-0.854" bx="-2.845" by="-0.64" bz="-0.93" width="0.7" taper="0.7" midpoint="0.1"/>
 
   <wing x="0.034" y="0.413" z="-0.010"
         chord="2.93"
         length="4.62"
         taper="0.41"
         sweep="25"
-        dihedral="-5.0"
-        camber="0.08485">
+        dihedral="-6"
+        camber="0.164">
         <stall aoa="16" width="3" peak="1.3"/>
-        <flap0 start="0.09" end="0.638" lift="1.5" drag="1.3"/>
-        <flap1 start="0.638" end="1.0" lift="1.3" drag="1.2"/>
+        <flap0 start="0.25" end="0.638" lift="1.5" drag="1.3"/>
+        <flap1 start="0.638" end="1" lift="1.3" drag="1.2"/>
         <spoiler start="0.2" end="0.8"  lift="10.0" drag="1.0"/>
 
         <control-input axis="/controls/flight/flaps" control="FLAP0"/>
@@ -58,9 +64,9 @@ http://www.aviationnow.com/media/pdf/spec_04_gas_turbines.pdf
 
   <hstab x="-4.728" y="0.329" z="-0.295"
         chord="1.402"
-        length="1.907"
-        taper="0.71" 
-        sweep="32.5"
+        length="2.1"
+        taper="0.62" 
+        sweep="25"
         dihedral="-10.0">
         <stall aoa="16" width="7" peak="1.4"/>
         <flap0 start="0" end="1" lift="1.5" drag="1.7"/>
@@ -71,13 +77,13 @@ http://www.aviationnow.com/media/pdf/spec_04_gas_turbines.pdf
         <control-output control="FLAP0" prop="surface-positions/elevator-pos-norm"/>
   </hstab>
 
-  <vstab x="-4.370" y="0" z="0.42"
+  <vstab x="-4.370" y="0" z="0"
          chord="1.920"
-         length="2.130"
+         length="2.5"
          taper="0.35"
-         sweep="34">
+         sweep="35">
          <stall aoa="14" width="5" peak="1.5"/>
-         <flap0 start="0" end="0.7" lift="0.5" drag="1"/>
+         <flap0 start="0" end="0.75" lift="0.5" drag="1"/>
 
          <control-input axis="/controls/flight/rudder" control="FLAP0"/>
          <control-input axis="/controls/flight/rudder-trim" control="FLAP0"/>
@@ -121,7 +127,7 @@ http://www.aviationnow.com/media/pdf/spec_04_gas_turbines.pdf
         <control-speed control="EXTEND" transition-time="7"/>
   </gear>
 
-    <!-- left main -->
+  <!-- left main -->
   <gear x="-0.470" y="1.341" z="-2.010"
         retract-time="7"
         compression="0.2"
@@ -155,7 +161,7 @@ http://www.aviationnow.com/media/pdf/spec_04_gas_turbines.pdf
   <!-- fuel capacity in pounds; 1520kg=3351lb -->
   <tank x="-0.134" y="0.0" z="-0.334" jet="true" capacity="2351"/>
 
-  <!-- CG Théorique x=-0.034 y=0.0 z=-0.010 -->
-  <ballast x="3.9" y="0.0" z="-1" mass="1000"/>
+  <!-- CG Theorique x=-0.034 y=0.0 z=-0.010 -->
+  <ballast x="4.5" y="0" z="-2" mass="1200"/>
 
 </airplane>
