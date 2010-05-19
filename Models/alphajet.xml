@@ -63,6 +63,9 @@
     <object-name>porteD1</object-name>
     <object-name>porteD2</object-name>
     <object-name>porteD3</object-name>
+    <object-name>porteA</object-name>
+    <object-name>porteAG</object-name>
+    <object-name>porteAD</object-name>
 
     <!-- Objets transparents -->
     <object-name>verriere</object-name>
@@ -124,6 +127,9 @@
     <object-name>porteD1</object-name>
     <object-name>porteD2</object-name>
     <object-name>porteD3</object-name>
+    <object-name>porteA</object-name>
+    <object-name>porteAG</object-name>
+    <object-name>porteAD</object-name>
 
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
@@ -190,6 +196,9 @@
     <object-name>porteD1</object-name>
     <object-name>porteD2</object-name>
     <object-name>porteD3</object-name>
+    <object-name>porteA</object-name>
+    <object-name>porteAG</object-name>
+    <object-name>porteAD</object-name>
   </effect>
 
   <animation>
@@ -210,6 +219,42 @@
     <object-name>lampeV</object-name>
     <object-name>lampesC</object-name>
     <object-name>lampenoze</object-name>
+  </animation>
+
+  <!-- Effacement des roues une fois les trains rentrés -->
+  <animation>
+    <name>ToutLesTrains</name>
+    <object-name>roueA</object-name>
+    <object-name>axeAH</object-name>
+    <object-name>axeAB</object-name>
+    <object-name>verinA</object-name>
+    <object-name>roueG</object-name>
+    <object-name>roueD</object-name>
+    <object-name>axeG1</object-name>
+    <object-name>axeG2</object-name>
+    <object-name>axeG3</object-name>
+    <object-name>axeG4</object-name>
+    <object-name>axeG5</object-name>
+    <object-name>axeG6</object-name>
+    <object-name>axeD1</object-name>
+    <object-name>axeD2</object-name>
+    <object-name>axeD3</object-name>
+    <object-name>axeD4</object-name>
+    <object-name>axeD5</object-name>
+    <object-name>axeD6</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>ToutLesTrains</object-name>
+    <condition>
+      <not>
+        <equals>
+          <property>gear/gear[0]/position-norm</property>
+          <value> 0 </value>
+        </equals>
+      </not>
+    </condition>
   </animation>
 
   <!-- Une ombre pour OSG -->
@@ -291,6 +336,65 @@
   </model>
 
   <!-- Animation des portes des trains -->
+  <animation>
+    <type>rotate</type>
+    <object-name>porteA</object-name>
+    <property>/gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
+      <entry><ind> 0.3 </ind><dep> -100 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> -100 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -4.596 </x1-m>
+      <y1-m>  0.000 </y1-m>
+      <z1-m> -1.335 </z1-m>
+      <x2-m> -4.077 </x2-m>
+      <y2-m>  0.004 </y2-m>
+      <z2-m> -1.337 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>porteAG</object-name>
+    <property>/gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
+      <entry><ind> 0.3 </ind><dep> -120 </dep></entry>
+      <entry><ind> 0.9 </ind><dep> -120 </dep></entry>
+      <entry><ind> 1.0 </ind><dep>    0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -5.483 </x1-m>
+      <y1-m> -0.020 </y1-m>
+      <z1-m> -1.283 </z1-m>
+      <x2-m> -4.955 </x2-m>
+      <y2-m> -0.048 </y2-m>
+      <z2-m> -1.317 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>porteAD</object-name>
+    <property>/gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 0.3 </ind><dep> 120 </dep></entry>
+      <entry><ind> 0.9 </ind><dep> 120 </dep></entry>
+      <entry><ind> 1.0 </ind><dep>   0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -5.313 </x1-m>
+      <y1-m>  0.193 </y1-m>
+      <z1-m> -1.250 </z1-m>
+      <x2-m> -5.000 </x2-m>
+      <y2-m>  0.193 </y2-m>
+      <z2-m> -1.278 </z2-m>
+    </axis>
+  </animation>
+
   <animation>
     <type>rotate</type>
     <object-name>porteG1</object-name>
