@@ -297,5 +297,29 @@
     </offsets>
   </model>
 
+  <!-- smoke -->
+  <model>
+    <name>PanelSmoke</name>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/smoke/smoke.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.283 </y-m>
+      <z-m>  0.201 </z-m>
+      <roll-deg>    34 </roll-deg>
+      <pitch-deg>  -10 </pitch-deg>
+      <heading-deg> 15 </heading-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>PanelSmoke</object-name>
+    <condition>
+      <not>
+        <property>sim/model/hide-yoke</property>
+      </not>
+    </condition>
+  </animation>
+
 </PropertyList>
 

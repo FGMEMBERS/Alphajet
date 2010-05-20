@@ -83,7 +83,11 @@
   <controls>
     <smoke alias="/sim/multiplay/generic/int[6]"/>
     <color type="int" alias="/sim/multiplay/generic/int[7]">0</color>
+    <gear>
+      <brake-parking type="double">1</brake-parking>
+    </gear>
   </controls>
+
   
   <instrumentation>
     <kcs55 include="Models/Interior/Panel/Instruments/kcs55/kcs55.xml"/>
