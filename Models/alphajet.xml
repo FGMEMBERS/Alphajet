@@ -286,6 +286,54 @@
   </animation>
 
   <!-- Particules pour OSG -->
+  <!-- Les flammes -->
+  <!-- Gauche -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Effects/flammes/flammesG.xml</path>
+    <offsets>
+      <x-m>  2.552 </x-m>
+      <y-m> -0.652 </y-m>
+      <z-m> -0.902 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Droite -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Effects/flammes/flammesD.xml</path>
+    <offsets>
+      <x-m>  2.552 </x-m>
+      <y-m>  0.652 </y-m>
+      <z-m> -0.902 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Gauche -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Effects/tiptrail.xml</path>
+    <offsets>
+      <x-m>  1.834 </x-m>
+      <y-m> -4.486 </y-m>
+      <z-m> -0.478 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Droite -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Effects/tiptrail.xml</path>
+    <offsets>
+      <x-m>  1.834 </x-m>
+      <y-m>  4.486 </y-m>
+      <z-m> -0.478 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Fumée -->
   <model>
     <path>Aircraft/Alphajet/Models/Effects/smokeB.xml</path>
     <offsets>
@@ -319,6 +367,37 @@
       <roll-deg>    0 </roll-deg>
       <pitch-deg>   0 </pitch-deg>
       <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Effets sur le sol -->
+  <!-- Roue avant -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Effects/ground/ground0.xml</path>
+    <offsets>
+      <x-m> -4.289 </x-m>
+      <y-m>  0.112 </y-m>
+      <z-m> -2.067 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Roue gauche -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Effects/ground/ground1.xml</path>
+    <offsets>
+      <x-m>  0.470 </x-m>
+      <y-m> -1.341 </y-m>
+      <z-m> -2.010 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Roue droite -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Effects/ground/ground2.xml</path>
+    <offsets>
+      <x-m>  0.470 </x-m>
+      <y-m>  1.341 </y-m>
+      <z-m> -2.010 </z-m>
     </offsets>
   </model>
 
