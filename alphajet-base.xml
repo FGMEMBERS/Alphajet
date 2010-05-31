@@ -44,6 +44,8 @@
         <int type="int">0</int>  <!-- 5 immat -->
         <int type="bool">0</int> <!-- 6 smoke -->
         <int type="int">0</int>  <!-- 7 color -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
       </generic>
     </multiplay>
 
@@ -96,11 +98,22 @@
       <slaved>true</slaved>
     </ka51>
     </kcs55>
+    <doors>
+      <crew>
+        <position-norm type="float">0</position-norm>
+      </crew>
+      <passenger>
+        <position-norm type="float">0</position-norm>
+      </passenger>
+    </doors>
   </instrumentation>
- 
+
+
   <nasal>
-    <alphajet>
+    <doors>
       <file>Aircraft/Alphajet/Nasal/doors.nas</file>
+    </doors>
+    <alphajet>
       <file>Aircraft/Alphajet/Nasal/liveries.nas</file>
       <file>Aircraft/Alphajet/Nasal/immat.nas</file>
       <file>Aircraft/Alphajet/Nasal/light.nas</file>

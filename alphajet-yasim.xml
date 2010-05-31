@@ -46,7 +46,7 @@
         <stall aoa="16" width="3" peak="1.3"/>
         <flap0 start="0.25" end="0.638" lift="1.5" drag="1.3"/>
         <flap1 start="0.638" end="1" lift="1.3" drag="1.2"/>
-        <spoiler start="0.2" end="0.8"  lift="8" drag="6"/>
+        <spoiler start="0.2" end="0.8"  lift="6" drag="4"/>
 
         <control-input axis="/controls/flight/flaps" control="FLAP0"/>
         <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
@@ -63,18 +63,18 @@
   </wing>
 
   <hstab x="-4.728" y="0.329" z="-0.295"
-        chord="1.402"
-        length="2.1"
-        taper="0.62" 
-        sweep="25"
-        dihedral="-10.0">
-        <stall aoa="16" width="7" peak="1.4"/>
-        <flap0 start="0" end="1" lift="1.5" drag="1.7"/>
+         chord="1.402"
+         length="2.1"
+         taper="0.62" 
+         sweep="25"
+         dihedral="-10.0">
+         <stall aoa="16" width="7" peak="1.4"/>
+         <flap0 start="0" end="1" lift="1.5" drag="1.7"/>
 
-        <control-input axis="/controls/flight/elevator" control="FLAP0"/>
-        <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+         <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+         <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
 
-        <control-output control="FLAP0" prop="surface-positions/elevator-pos-norm"/>
+         <control-output control="FLAP0" prop="surface-positions/elevator-pos-norm"/>
   </hstab>
 
   <vstab x="-4.370" y="0" z="0"
@@ -165,3 +165,4 @@
   <ballast x="4.5" y="0" z="-2" mass="1200"/>
 
 </airplane>
+
