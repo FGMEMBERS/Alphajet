@@ -166,7 +166,7 @@
   </animation>
 
   <effect>
-    <inherits-from>Aircraft/Alphajet/Models/Effects/Alphajetreflect</inherits-from>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
     <object-name>fuselage</object-name>
     <object-name>aile</object-name>
     <object-name>aileronG</object-name>
