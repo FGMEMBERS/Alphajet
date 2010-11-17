@@ -14,6 +14,19 @@
     <object-name>panelC</object-name>
   </animation>
 
+  <!-- NAV LIGHT -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.210 </y-m>
+      <z-m>  0.060 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
   <!-- ai -->
   <model>
     <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/ai/ai.xml</path>
