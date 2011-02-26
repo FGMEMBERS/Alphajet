@@ -280,17 +280,6 @@
 
   <animation>
     <type>select</type>
-    <object-name>shadowOSG</object-name>
-    <condition>
-      <equals>
-        <property>sim[0]/rendering/shadows-ai</property>
-        <value>true</value>
-      </equals>
-    </condition>
-  </animation>
-
-  <animation>
-    <type>select</type>
     <object-name>reservoir</object-name>
     <object-name>tuyeaux</object-name>
     <condition>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- Source : http://paf.virtuelle.free.fr/images/cockpit/5.jpg -->
-
 <PropertyList>
 
   <path>panel.ac</path>
@@ -13,6 +12,19 @@
     <object-name>panelD</object-name>
     <object-name>panelC</object-name>
   </animation>
+
+  <!-- fiche -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/fiche/fiche.xml</path>
+    <offsets>
+      <x-m> 0.004 </x-m>
+      <y-m> 0.066 </y-m>
+      <z-m> 0.130 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
 
   <!-- NAV LIGHT -->
   <model>
