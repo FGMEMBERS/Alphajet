@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?> 
 
 <PropertyList>
 
@@ -274,8 +274,17 @@
 
   <!-- Une ombre pour OSG -->
   <model>
-    <name>shadowOSG</name>
     <path>Aircraft/Alphajet/Models/shadow.xml</path>
+    <offsets>
+      <x-m> -0.016 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.891 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Intérieur -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/interior.xml</path>
   </model>
 
   <animation>
@@ -301,9 +310,27 @@
     </offsets>
   </model>
 
+  <model>
+    <path>Aircraft/Alphajet/Models/Effects/smoke/smokeG.xml</path>
+    <offsets>
+      <x-m>  2.552 </x-m>
+      <y-m> -0.652 </y-m>
+      <z-m> -0.902 </z-m>
+    </offsets>
+  </model>
+
   <!-- Droite -->
   <model>
     <path>Aircraft/Alphajet/Models/Effects/flammes/flammesD.xml</path>
+    <offsets>
+      <x-m>  2.552 </x-m>
+      <y-m>  0.652 </y-m>
+      <z-m> -0.902 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Alphajet/Models/Effects/smoke/smokeD.xml</path>
     <offsets>
       <x-m>  2.552 </x-m>
       <y-m>  0.652 </y-m>
@@ -402,19 +429,6 @@
       <x-m>  0.470 </x-m>
       <y-m>  1.341 </y-m>
       <z-m> -2.010 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Intérieur -->
-  <model>
-    <path>Aircraft/Alphajet/Models/Interior/interior.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 

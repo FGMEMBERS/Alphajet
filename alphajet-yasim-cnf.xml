@@ -1,20 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?> 
 
 <PropertyList include="alphajet-base.xml">
 
- <sim>
+  <sim>
 
-  <description>Dassult/Dornier Alphajet (YASim)</description>
-  <flight-model>yasim</flight-model>
-  <aero>alphajet-yasim</aero>
+    <description>Dassult/Dornier Alphajet (YASim)</description>
+    <author>BARANGER Emmanuel (3D/FDM), NISHIOKA Tatsuhiro and F-GTUX (FDM)</author>
+    <flight-model>yasim</flight-model>
+    <aero>alphajet-yasim</aero>
 
- </sim>
-
- <yasim>
-   <alphajet>
-     <pilot-lb>128</pilot-lb>
-   </alphajet>
- </yasim>
+  </sim>
 
 </PropertyList>
 
