@@ -20,22 +20,26 @@
       <x-m> 0.004 </x-m>
       <y-m> 0.066 </y-m>
       <z-m> 0.130 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
-  <!-- NAV LIGHT -->
+  <!-- LANDING LIGHT -->
   <model>
     <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
     <offsets>
       <x-m>  0.000 </x-m>
       <y-m>  0.210 </y-m>
       <z-m>  0.060 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- NAV LIGHT -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/divers/nav-lights.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.210 </y-m>
+      <z-m>  0.073 </z-m>
     </offsets>
   </model>
 
@@ -46,9 +50,6 @@
       <x-m>  0.000 </x-m>
       <y-m>  0.000 </y-m>
       <z-m> -0.039 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -59,9 +60,6 @@
       <x-m> -0.004 </x-m>
       <y-m>  0.126 </y-m>
       <z-m> -0.043 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -72,9 +70,6 @@
       <x-m> -0.004 </x-m>
       <y-m> -0.126 </y-m>
       <z-m> -0.043 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -85,9 +80,6 @@
       <x-m> -0.003 </x-m>
       <y-m>  0.234 </y-m>
       <z-m> -0.023 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -97,9 +89,6 @@
       <x-m> -0.003 </x-m>
       <y-m>  0.314 </y-m>
       <z-m> -0.023 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -110,9 +99,6 @@
       <x-m> -0.003 </x-m>
       <y-m>  0.234 </y-m>
       <z-m> -0.104 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -122,9 +108,6 @@
       <x-m> -0.003 </x-m>
       <y-m>  0.314 </y-m>
       <z-m> -0.104 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -135,9 +118,6 @@
       <x-m>  0.001 </x-m>
       <y-m> -0.259 </y-m>
       <z-m>  0.055 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -148,9 +128,6 @@
       <x-m> -0.003 </x-m>
       <y-m>  0.234 </y-m>
       <z-m> -0.186 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -160,9 +137,6 @@
       <x-m> -0.003 </x-m>
       <y-m>  0.314 </y-m>
       <z-m> -0.186 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -173,9 +147,6 @@
       <x-m> -0.003 </x-m>
       <y-m>  0.137 </y-m>
       <z-m>  0.151 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -186,9 +157,6 @@
       <x-m> -0.003 </x-m>
       <y-m>  0.275 </y-m>
       <z-m>  0.050 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -199,9 +167,6 @@
       <x-m> -0.003 </x-m>
       <y-m>  0.137 </y-m>
       <z-m>  0.062 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -212,22 +177,16 @@
       <x-m> -0.003 </x-m>
       <y-m>  0.111 </y-m>
       <z-m> -0.146 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
-  <!-- vsi -->
+  <!-- clock -->
   <model>
     <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/clock/clock.xml</path>
     <offsets>
       <x-m> -0.003 </x-m>
       <y-m> -0.163 </y-m>
       <z-m>  0.082 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -238,9 +197,6 @@
       <x-m> -0.020 </x-m>
       <y-m> -0.110 </y-m>
       <z-m> -0.146 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -251,9 +207,6 @@
       <x-m>  0.004 </x-m>
       <y-m>  0.000 </y-m>
       <z-m> -0.163 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -264,9 +217,6 @@
       <x-m>  0.001 </x-m>
       <y-m> -0.086 </y-m>
       <z-m> -0.210 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -277,9 +227,6 @@
       <x-m>  0.004 </x-m>
       <y-m> -0.247 </y-m>
       <z-m> -0.046 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -290,9 +237,6 @@
       <x-m>  0.001 </x-m>
       <y-m> -0.257 </y-m>
       <z-m> -0.160 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -303,9 +247,6 @@
       <x-m>  0.551 </x-m>
       <y-m> -0.427 </y-m>
       <z-m> -0.332 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 

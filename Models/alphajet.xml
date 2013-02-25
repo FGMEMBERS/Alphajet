@@ -150,35 +150,16 @@
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
     <emission>
       <red-prop>emission/red</red-prop>
       <green-prop>emission/green</green-prop>
       <blue-prop>emission/blue</blue-prop>
     </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <effect>
@@ -214,6 +195,47 @@
     <object-name>porteA</object-name>
     <object-name>porteAG</object-name>
     <object-name>porteAD</object-name>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+  </effect>
+
+  <effect>
+    <inherits-from>Effects/model-combined-deferred</inherits-from>
+    <object-name>fuselage</object-name>
+    <object-name>aile</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>voletG</object-name>
+    <object-name>voletD</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>derive</object-name>
+    <object-name>direction</object-name>
+    <object-name>moteur</object-name>
+    <object-name>sortie</object-name>
+    <object-name>ailette</object-name>
+    <object-name>ailette2</object-name>
+    <object-name>ailette3</object-name>
+    <object-name>plaque</object-name>
+    <object-name>reservoir</object-name>
+    <object-name>tourverriere</object-name>
+    <object-name>tourverriere1</object-name>
+    <object-name>tourverriere2</object-name>
+    <object-name>supportslampes</object-name>
+    <object-name>freinG</object-name>
+    <object-name>freinD</object-name>
+    <object-name>porteG1</object-name>
+    <object-name>porteG2</object-name>
+    <object-name>porteG3</object-name>
+    <object-name>porteD1</object-name>
+    <object-name>porteD2</object-name>
+    <object-name>porteD3</object-name>
+    <object-name>porteA</object-name>
+    <object-name>porteAG</object-name>
+    <object-name>porteAD</object-name>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
   </effect>
 
   <animation>
@@ -235,6 +257,21 @@
     <object-name>lampesC</object-name>
     <object-name>lampenoze</object-name>
   </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>verriere</object-name>
+    <object-name>verriere1</object-name>
+    <object-name>verriere2</object-name>
+    <object-name>lampeR</object-name>
+    <object-name>lampeV</object-name>
+    <object-name>lampesC</object-name>
+    <object-name>lampenoze</object-name>
+  </effect>
 
   <!-- Effacement des roues une fois les trains rentrés -->
   <animation>
@@ -284,8 +321,15 @@
 
   <!-- Intérieur -->
   <model>
+    <name>Interieur</name>
     <path>Aircraft/Alphajet/Models/Interior/interior.xml</path>
   </model>
+
+  <!-- For Rembrandt -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>Interieur</object-name>
+  </animation>
 
   <animation>
     <type>select</type>
@@ -302,7 +346,7 @@
   <!-- Les flammes -->
   <!-- Gauche -->
   <model>
-    <path>Aircraft/Alphajet/Models/Effects/flammes/flammesG.xml</path>
+    <path>Aircraft/Alphajet/Models/Effects/flammes/combustionG.xml</path>
     <offsets>
       <x-m>  2.552 </x-m>
       <y-m> -0.652 </y-m>
@@ -321,7 +365,7 @@
 
   <!-- Droite -->
   <model>
-    <path>Aircraft/Alphajet/Models/Effects/flammes/flammesD.xml</path>
+    <path>Aircraft/Alphajet/Models/Effects/flammes/combustionD.xml</path>
     <offsets>
       <x-m>  2.552 </x-m>
       <y-m>  0.652 </y-m>
@@ -345,9 +389,6 @@
       <x-m>  1.834 </x-m>
       <y-m> -4.486 </y-m>
       <z-m> -0.478 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -358,9 +399,6 @@
       <x-m>  1.834 </x-m>
       <y-m>  4.486 </y-m>
       <z-m> -0.478 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -371,9 +409,6 @@
       <x-m>  3.025 </x-m>
       <y-m> -0.641 </y-m>
       <z-m> -0.923 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -383,9 +418,6 @@
       <x-m>  3.025 </x-m>
       <y-m> -0.641 </y-m>
       <z-m> -0.923 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -395,9 +427,6 @@
       <x-m>  3.025 </x-m>
       <y-m> -0.641 </y-m>
       <z-m> -0.923 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -886,12 +915,13 @@
     </axis>
   </animation>
 
-  <!-- Rotation de la roue avant en fonction de la gouverne de direction -->
+  <!-- Rotation de la roue avant libre -->
+  <!-- pivotement (castered) by Dany93 Thanks to him -->
   <animation>
     <type>rotate</type>
     <object-name>TrainAvant</object-name>
-    <property>surface-positions/rudder-pos-norm</property>
-    <factor> -30 </factor>
+    <property>gear/gear[0]/caster-angle-deg</property>
+    <factor> 1 </factor>
     <center>
       <x-m> -4.473 </x-m>
       <y-m>  0.100 </y-m>
@@ -1068,7 +1098,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Alphajet/Models/light/StrobeWhite.xml</path>
+    <path>Aircraft/Alphajet/Models/light/StrobeLight.xml</path>
     <offsets>
       <x-m>  1.830 </x-m>
       <y-m> -4.490 </y-m>
@@ -1086,7 +1116,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Alphajet/Models/light/StrobeWhite.xml</path>
+    <path>Aircraft/Alphajet/Models/light/StrobeLight.xml</path>
     <offsets>
       <x-m>  1.830 </x-m>
       <y-m>  4.490 </y-m>
@@ -1105,16 +1135,5 @@
       <pitch-deg> -7.500 </pitch-deg>
     </offsets>
   </model>
-
-  <animation>
-    <type>select</type>
-    <object-name>Taxi-Light</object-name>
-    <condition>
-      <equals>
-        <property>controls/switches/landing-light</property>
-        <value> 1 </value>
-      </equals>
-    </condition>
-  </animation>
 
 </PropertyList>

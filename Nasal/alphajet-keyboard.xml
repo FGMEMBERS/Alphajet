@@ -40,5 +40,22 @@
     </binding>
   </key>
 
+  <key n="108">
+    <name>l</name>
+    <desc>Toggle tail-wheel lock.</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>/controls/gear/tailwheel-lock</property>
+    </binding>
+  </key>
+<!--
+  <key n="125">
+    <name>}</name>
+    <desc>Engine Autostart</desc>
+    <binding>
+      <command>nasal</command>
+      <script>engines.engine1.autostart();</script>
+    </binding>
+  </key>
+-->
 </PropertyList>
-

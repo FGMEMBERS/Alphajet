@@ -4,6 +4,61 @@
 
   <fx>
 
+    <!-- Moteur 1 -->
+    <engine>
+      <name>engine-start-inside</name>
+      <mode>once</mode>
+      <path>Aircraft/Alphajet/Sounds/turbine_start_in.wav</path>
+      <condition>
+        <and>
+          <property>/controls/engines/engine[0]/starter</property>
+          <property>/sim/current-view/internal</property>
+        </and>
+      </condition>
+      <volume>
+        <property>engines/engine[0]/n2</property>
+        <factor> 0.01 </factor>
+        <min> 0.03 </min>
+        <max> 0.07 </max>
+      </volume>
+      <pitch>
+        <property>engines/engine[0]/n2</property>
+        <factor> 0.01 </factor>
+        <min> 0.0 </min>
+        <max> 0.9 </max>
+      </pitch>
+       <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+   </engine>
+
+    <engine>
+      <name>engine-start-outside</name>
+      <mode>once</mode>
+      <path>Aircraft/Alphajet/Sounds/turbine_start_out.wav</path>
+      <condition>
+        <and>
+          <property>/controls/engines/engine[0]/starter</property>
+          <not>
+            <property>/sim/current-view/internal</property>
+          </not>
+        </and>
+      </condition>
+      <volume>
+        <property>engines/engine[0]/n2</property>
+        <factor> 0.09 </factor>
+        <min> 0.3 </min>
+        <max> 0.9 </max>
+      </volume>
+      <pitch>
+        <property>engines/engine[0]/n2</property>
+        <factor> 0.01 </factor>
+        <min> 0.0 </min>
+        <max> 0.9 </max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
     <engine>
       <name>engine</name>
       <path>Aircraft/Alphajet/Sounds/running.wav</path>
@@ -37,6 +92,61 @@
         <factor>0.02</factor>
         <offset>-0.1</offset>
       </pitch>
+    </engine>
+
+    <!-- Moteur 1 -->
+    <engine>
+      <name>engine-start-inside</name>
+      <mode>once</mode>
+      <path>Aircraft/Alphajet/Sounds/turbine_start_in.wav</path>
+      <condition>
+        <and>
+          <property>/controls/engines/engine[1]/starter</property>
+          <property>/sim/current-view/internal</property>
+        </and>
+      </condition>
+      <volume>
+        <property>engines/engine[1]/n2</property>
+        <factor> 0.01 </factor>
+        <min> 0.03 </min>
+        <max> 0.07 </max>
+      </volume>
+      <pitch>
+        <property>engines/engine[1]/n2</property>
+        <factor> 0.01 </factor>
+        <min> 0.0 </min>
+        <max> 0.9 </max>
+      </pitch>
+       <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+   </engine>
+
+    <engine>
+      <name>engine-start-outside</name>
+      <mode>once</mode>
+      <path>Aircraft/Alphajet/Sounds/turbine_start_out.wav</path>
+      <condition>
+        <and>
+          <property>/controls/engines/engine[1]/starter</property>
+          <not>
+            <property>/sim/current-view/internal</property>
+          </not>
+        </and>
+      </condition>
+      <volume>
+        <property>engines/engine[1]/n2</property>
+        <factor> 0.09 </factor>
+        <min> 0.3 </min>
+        <max> 0.9 </max>
+      </volume>
+      <pitch>
+        <property>engines/engine[1]/n2</property>
+        <factor> 0.01 </factor>
+        <min> 0.0 </min>
+        <max> 0.9 </max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
     </engine>
 
     <engine>
@@ -74,6 +184,7 @@
       </pitch>
     </engine>
 
+    <!-- -->
     <rumble>
       <name>rumble</name>
       <mode>looped</mode>

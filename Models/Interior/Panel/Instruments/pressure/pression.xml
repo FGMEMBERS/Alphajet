@@ -50,9 +50,9 @@
       <entry><ind>   5.07632 </ind><dep> -115 </dep></entry> <!-- 350 mbar -->
     </interpolation>
     <center>
-      <x-m> -0.002 </x-m>
-      <y-m> -0.022 </y-m>
-      <z-m> -0.001 </z-m>  
+      <x-m> -0.002000 </x-m>
+      <y-m> -0.024220 </y-m>
+      <z-m> -0.000789 </z-m>  
     </center>
     <axis> 
       <x> -1 </x>
@@ -73,9 +73,9 @@
       <entry><ind>   5.07632 </ind><dep> 115 </dep></entry> <!-- 350 mbar -->
     </interpolation>
     <center>
-      <x-m> -0.002 </x-m>
-      <y-m> -0.022 </y-m>
-      <z-m> -0.001 </z-m>  
+      <x-m> -0.002000 </x-m>
+      <y-m>  0.023760 </y-m>
+      <z-m> -0.000789 </z-m>  
     </center>
     <axis> 
       <x> -1 </x>

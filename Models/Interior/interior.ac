@@ -8,8 +8,8 @@ name "interieur"
 loc 0 0 -0
 data 9
 interieur
-texture "colors.png"
-texrep 1 1
+texture "interior.png"
+texrep 1.000000 1.000000
 crease 30.000001
 numvert 220
 -0.945277 0.188979 0.278909
@@ -1888,8 +1888,8 @@ name "inttourverriere"
 loc 0 0 -0
 data 15
 inttourverriere
-texture "colors.png"
-texrep 1 1
+texture "interior.png"
+texrep 1.000000 1.000000
 crease 30.000001
 numvert 469
 -3.541846 -0.427656 0.438689
@@ -5023,8 +5023,8 @@ name "inttourverriere1"
 loc 0 0 -0
 data 16
 inttourverriere1
-texture "colors.png"
-texrep 1 1
+texture "interior.png"
+texrep 1.000000 1.000000
 crease 30.000001
 numvert 248
 -3.560164 -0.387278 0.439069
@@ -6606,8 +6606,8 @@ name "inttourverriere2"
 loc 0 0 -0
 data 16
 inttourverriere2
-texture "colors.png"
-texrep 1 1
+texture "interior.png"
+texrep 1.000000 1.000000
 crease 30.000001
 numvert 178
 -1.450544 -0.028103 0.382253
@@ -9478,8 +9478,8 @@ name "retrosarrieres"
 loc 0 0 -0
 data 14
 retrosarrieres
-texture "colors.png"
-texrep 1 1
+texture "interior.png"
+texrep 1.000000 1.000000
 crease 30.000001
 numvert 440
 -2.208332 0.28546 0.203924
@@ -12945,8 +12945,8 @@ name "retrosavants"
 loc 0 0 -0
 data 12
 retrosavants
-texture "colors.png"
-texrep 1 1
+texture "interior.png"
+texrep 1.000000 1.000000
 crease 30.000001
 numvert 440
 -3.741293 -0.113088 0.299602
@@ -16412,8 +16412,8 @@ name "separation"
 loc 0 0 -0
 data 10
 separation
-texture "colors.png"
-texrep 1 1
+texture "interior.png"
+texrep 1.000000 1.000000
 crease 30.000001
 numvert 94
 -2.691293 -1.316231 -0.000333
