@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<!-- Source : http://paf.virtuelle.free.fr/images/cockpit/5.jpg -->
+<PropertyList>
+
+  <path>panel2.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+    <object-name>panelG</object-name>
+    <object-name>panelD</object-name>
+    <object-name>panelC</object-name>
+  </animation>
+
+  <!-- fiche -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/fiche/fiche.xml</path>
+    <offsets>
+      <x-m> 0.004 </x-m>
+      <y-m> 0.066 </y-m>
+      <z-m> 0.130 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ai -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.039 </z-m>
+    </offsets>
+  </model>
+
+  <!-- alt -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m> -0.004 </x-m>
+      <y-m>  0.126 </y-m>
+      <z-m> -0.043 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Asi -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m> -0.004 </x-m>
+      <y-m> -0.126 </y-m>
+      <z-m> -0.043 </z-m>
+    </offsets>
+  </model>
+
+  <!-- tac -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/tac/tac1.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.234 </y-m>
+      <z-m> -0.023 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/tac/tac2.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.314 </y-m>
+      <z-m> -0.023 </z-m>
+    </offsets>
+  </model>
+
+  <!-- egt -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/egt/egt1.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.234 </y-m>
+      <z-m> -0.104 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/egt/egt2.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.314 </y-m>
+      <z-m> -0.104 </z-m>
+    </offsets>
+  </model>
+
+  <!-- gear -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/gear/gear.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.259 </y-m>
+      <z-m>  0.055 </z-m>
+    </offsets>
+  </model>
+
+  <!-- débit -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/debit/debit1.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.234 </y-m>
+      <z-m> -0.186 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/debit/debit2.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.314 </y-m>
+      <z-m> -0.186 </z-m>
+    </offsets>
+  </model>
+
+  <!-- G Meter -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/accel/accel.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.137 </y-m>
+      <z-m>  0.151 </z-m>
+    </offsets>
+  </model>
+
+  <!-- fuel -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/fuel/fuel.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.275 </y-m>
+      <z-m>  0.050 </z-m>
+    </offsets>
+  </model>
+
+  <!-- pression -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/pressure/pression.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.137 </y-m>
+      <z-m>  0.062 </z-m>
+    </offsets>
+  </model>
+
+  <!-- vsi -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.111 </y-m>
+      <z-m> -0.146 </z-m>
+    </offsets>
+  </model>
+
+  <!-- vsi -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/clock/clock.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m> -0.163 </y-m>
+      <z-m>  0.082 </z-m>
+    </offsets>
+  </model>
+
+  <!-- adi -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/adi/adi.xml</path>
+    <offsets>
+      <x-m> -0.020 </x-m>
+      <y-m> -0.110 </y-m>
+      <z-m> -0.146 </z-m>
+    </offsets>
+  </model>
+
+  <!-- kcs55 -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/kcs55/ki525a.xml</path>
+    <offsets>
+      <x-m>  0.004 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.163 </z-m>
+    </offsets>
+  </model>
+
+  <!-- kcs55 -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/kcs55/ka51b.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.086 </y-m>
+      <z-m> -0.210 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ki206 -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/ki206/ki206.xml</path>
+    <offsets>
+      <x-m>  0.004 </x-m>
+      <y-m> -0.247 </y-m>
+      <z-m> -0.046 </z-m>
+    </offsets>
+  </model>
+
+  <!-- uhf-box -->
+  <model>
+    <path>Aircraft/Alphajet/Models/Interior/Panel/Instruments/uhf-box/uhf-box.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.257 </y-m>
+      <z-m> -0.160 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
