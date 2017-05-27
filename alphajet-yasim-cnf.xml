@@ -9,6 +9,22 @@
     <flight-model>yasim</flight-model>
     <aero>alphajet-yasim</aero>
 
+    <tags>
+      <tag>dassult</tag>
+      <tag>high-wing</tag>
+      <tag>tricycle</tag>
+      <tag>retractable-gear</tag>
+      <tag>castering</tag>
+      <tag>twin-engine</tag>
+      <tag>jet</tag>
+      <tag>fighter</tag>
+      <tag>trainer</tag>
+      <tag>ifr</tag>
+      <tag>1970s</tag>
+      <tag>1980s</tag>
+      <tag>1990s</tag>
+    </tags>
+
   </sim>
 
 </PropertyList>
