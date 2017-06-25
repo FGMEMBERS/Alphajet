@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!-- Based on EF2000 flame -->
-
 <PropertyList>
   
   <path>combustion.ac</path>
@@ -23,7 +22,8 @@
     <object-name>ExternalFlame</object-name>
     <condition>
       <greater-than>
-        <property>sim/multiplay/generic/float[8]</property>
+        <!-- controls/engines/engine[0]/throttle -->
+        <property>sim/multiplay/generic/float[6]</property>
         <value> 0.001 </value>
       </greater-than>
     </condition>
@@ -32,7 +32,8 @@
   <animation>
     <type>scale</type>
     <object-name>ExternalFlame</object-name>
-    <property>sim/multiplay/generic/float[8]</property>
+    <!-- controls/engines/engine[0]/throttle -->
+    <property>sim/multiplay/generic/float[6]</property>
     <x-min> 0.2 </x-min>
     <y-min> 0.9 </y-min>
     <z-min> 0.9 </z-min>
@@ -44,7 +45,8 @@
   <animation>
     <type>spin</type>
     <object-name>ExternalFlame</object-name>
-    <property>sim/multiplay/generic/float[6]</property>
+    <!-- /engines/engine[0]/n1 -->
+    <property>sim/multiplay/generic/float[4]</property>
     <factor> 259 </factor>
     <axis>
      <x> 1 </x>
@@ -57,10 +59,11 @@
     <type>material</type>
     <object-name>ExternalFlame</object-name>
     <emission>
+      <!-- controls/engines/engine[0]/throttle -->
+      <factor-prop>sim/multiplay/generic/float[6]</factor-prop>
       <red>   2 </red>
       <green> 2 </green>
       <blue>  2 </blue>
-      <factor-prop>sim/multiplay/generic/float[8]</factor-prop>
     </emission>
   </animation>
 

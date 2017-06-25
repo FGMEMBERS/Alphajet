@@ -13,24 +13,10 @@
     <object-name>separation</object-name>
     <object-name>retrosarrieres</object-name>
     <object-name>retrosavants</object-name>
-
+    <object-name>details</object-name>
+    <object-name>details2</object-name>
+    
     <!-- Objets transparents -->
-    <object-name>intverriere</object-name>
-    <object-name>intverriere1</object-name>
-    <object-name>intverriere2</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>intverriere</object-name>
-    <object-name>intverriere1</object-name>
-    <object-name>intverriere2</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
     <object-name>intverriere</object-name>
     <object-name>intverriere1</object-name>
     <object-name>intverriere2</object-name>
@@ -39,9 +25,6 @@
   <!-- working for Rembrandt -->
   <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
     <object-name>intverriere</object-name>
     <object-name>intverriere1</object-name>
     <object-name>intverriere2</object-name>
@@ -95,10 +78,30 @@
 
   <!-- Canopy -->
   <animation>
-    <type>rotate</type>
+    <name>IntCanopeAvant</name>
     <object-name>intverriere1</object-name>
     <object-name>inttourverriere1</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
+    <object-name>details</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>IntCanopeAvant</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>IntCanopeAvant</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
       <entry><ind> 1 </ind><dep> 76 </dep></entry>
@@ -116,10 +119,30 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <name>IntCanopeArriere</name>
     <object-name>intverriere2</object-name>
     <object-name>inttourverriere2</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
+    <object-name>details2</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>IntCanopeArriere</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>IntCanopeArriere</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
       <entry><ind> 1 </ind><dep> 76 </dep></entry>
@@ -137,4 +160,3 @@
   </animation>
 
 </PropertyList>
-

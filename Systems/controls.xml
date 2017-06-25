@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<PropertyList>
+
+    <smoke alias="/sim/multiplay/generic/int[6]"/>
+    <color type="int" alias="/sim/multiplay/generic/int[7]">0</color>
+    
+    <switches>
+      <landing-light type="bool">false</landing-light>
+      <nav-lights type="bool">false</nav-lights>
+    </switches>
+    
+    <lighting>
+      <instrument-lights type="bool">true</instrument-lights>
+      <nav-lights type="bool">false</nav-lights>
+      <landing-lights type="bool">false</landing-lights>
+    </lighting>
+    
+    <gear>
+      <brake-parking type="double">1</brake-parking>
+      <tailwheel-lock type="bool">false</tailwheel-lock>
+      <tailwheel-lock-pos type="double">1</tailwheel-lock-pos>    
+    </gear>
+    
+    <engines>
+      <engine n="0">
+        <boost type="double">0</boost>
+        <magnetos>0</magnetos>
+      </engine>
+      <engine n="1">
+        <boost type="double">0</boost>
+        <magnetos>0</magnetos>
+      </engine>
+    </engines>
+
+</PropertyList>

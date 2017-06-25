@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="ISO-8859-1"?> 
 
-<!-- <PropertyList include="alphajet-jsbsim-cnf.xml"> -->
-<PropertyList include="alphajet-yasim-cnf.xml">
+<PropertyList include="Systems/alphajet-base.xml">
 
   <sim>
 
-    <description>Dassult/Dornier Alphajet (YASim)</description>
+    <description>Dassault/Dornier Alphajet (YASim)</description>
     <author>BARANGER Emmanuel (3D/FDM), NISHIOKA Tatsuhiro and F-GTUX (FDM)</author>
  
+    <aircraft-version>0.2</aircraft-version>
+    <status>Alpha</status>
+    
+    <flight-model>yasim</flight-model>
+    <aero>Systems/alphajet-yasim</aero>
+    
+    <tags>
+      <tag>dassault</tag>
+      <tag>high-wing</tag>
+      <tag>tricycle</tag>
+      <tag>retractable-gear</tag>
+      <tag>twin-engine</tag>
+      <tag>jet</tag>
+      <tag>trainer</tag>
+      <tag>1970s</tag>
+      <tag>ifr</tag>
+    </tags>
+
     <rating>
       <FDM type="int">     3 </FDM>
       <systems type="int"> 3 </systems>
@@ -15,22 +32,6 @@
       <model type="int">   4 </model>
     </rating>
 
-    <tags>
-      <tag>trainer</tag>
-      <tag>dassault</tag>
-      <tag>1970s</tag>
-      <tag>1980s</tag>
-      <tag>1990s</tag>
-      <tag>2000s</tag>
-      <tag>2010s</tag>
-      <tag>aerobatic</tag>
-      <tag>retractable-gear</tag>
-      <tag>jet</tag>
-      <tag>ifr</tag>
-      <tag>twin-engine</tag>
-    </tags>
-
   </sim>
 
 </PropertyList>
-

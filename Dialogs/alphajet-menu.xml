@@ -7,6 +7,13 @@
       <label>Alphajet</label>
       <enabled type="bool">true</enabled>
       <item>
+        <label>Autostart</label>
+        <binding>
+          <command>nasal</command>
+          <script>engines.autostart();</script>
+        </binding>
+      </item>
+      <item>
         <label>Select Livery</label>
         <binding>
           <command>nasal</command>
@@ -61,4 +68,3 @@
   </default>
 
 </PropertyList>
-
