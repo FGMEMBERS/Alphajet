@@ -21,10 +21,15 @@
       <tag>twin-engine</tag>
       <tag>jet</tag>
       <tag>trainer</tag>
-      <tag>1970s</tag>
+      <tag>aerobatic</tag>
       <tag>ifr</tag>
+      <tag>1970s</tag>
+      <tag>1980s</tag>
+      <tag>1990s</tag>
+      <tag>2000s</tag>
+      <tag>2010s</tag>
     </tags>
-
+    
     <rating>
       <FDM type="int">     3 </FDM>
       <systems type="int"> 3 </systems>
