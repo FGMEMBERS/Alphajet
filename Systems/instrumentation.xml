@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<PropertyList>
+
+  <kcs55 include="../Models/Interior/Panel/Instruments/kcs55/kcs55.xml"/>
+    <kcs55 n="0">
+    <ka51>
+      <slaved>true</slaved>
+    </ka51>
+  </kcs55>
+  
+  <doors>
+    <crew>
+      <position-norm type="float">0</position-norm>
+    </crew>
+    <passenger>
+      <position-norm type="float">0</position-norm>
+    </passenger>
+  </doors>
+
+</PropertyList>

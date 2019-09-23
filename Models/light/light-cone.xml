@@ -14,9 +14,6 @@
      <inherits-from>Effects/model-transparent</inherits-from>
      <object-name>Cone</object-name>
      <object-name>Cone-texture</object-name>
-     <condition>
-       <property>sim/rendering/rembrandt/enabled</property>
-     </condition>
    </effect>
    
    <effect>
@@ -41,7 +38,7 @@
     <object-name>Cone-texture</object-name>
     <object-name>Light</object-name>
     <condition>
-      <property>controls/switches/landing-light</property>
+      <property>/controls/lighting/landing-lights</property>
     </condition>
   </animation>
 

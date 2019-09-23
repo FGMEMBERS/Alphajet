@@ -14,4 +14,3 @@ var loop = func {
 }
 
 loop();
-

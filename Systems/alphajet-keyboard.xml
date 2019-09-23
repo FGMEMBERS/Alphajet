@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<PropertyList>
+  
+  <keyboard>
+
+    <key n="68">
+      <name>D</name>
+      <desc>Passenger door</desc>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </key>
+
+    <key n="100">
+      <name>d</name>
+      <desc>Crew door</desc>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </key>
+
+    <key n="83">
+      <name>S</name>
+      <desc>Start smoke</desc>
+      <binding>
+        <command>property-assign</command>
+        <property>sim/multiplay/generic/int[6]</property>
+        <value>true</value>
+      </binding>
+    </key>
+
+    <key n="117">
+      <name>u</name>
+      <desc>Stop smoke</desc>
+      <binding>
+        <command>property-assign</command>
+        <property>sim/multiplay/generic/int[6]</property>
+        <value>false</value>
+      </binding>
+    </key>
+
+    <key n="108">
+      <name>l</name>
+      <desc>Toggle tail-wheel lock.</desc>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/gear/tailwheel-lock</property>
+      </binding>
+    </key>
+    
+    <key n="76">
+      <name>L</name>
+      <desc>Landing light</desc>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/landing-lights</property>
+      </binding>
+    </key>
+    
+    <key n="125">
+      <name>}</name>
+      <desc>Engine Autostart</desc>
+      <binding>
+        <command>nasal</command>
+        <script>engines.autostart();</script>
+      </binding>
+    </key>
+   
+  
+  </keyboard>
+
+</PropertyList>

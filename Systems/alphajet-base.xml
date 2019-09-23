@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<PropertyList>
+
+  <sim include="views.xml">
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <sound>
+      <audible>true</audible>
+      <path>Aircraft/Alphajet/Sounds/alphajet-sound.xml</path>
+    </sound>
+
+    <model>
+      <path>Aircraft/Alphajet/Models/alphajet.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <startup>
+      <splash-texture>Aircraft/Alphajet/alphajet-splash.png</splash-texture>
+    </startup>
+
+    <virtual-cockpit archive="y">true</virtual-cockpit>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int   n="0"  type="int">  0 </int>                                         <!-- 0 immat -->
+        <int   n="1"  type="int">  0 </int>                                         <!-- 1 immat -->
+        <int   n="2"  type="int">  0 </int>                                         <!-- 2 immat -->
+        <int   n="3"  type="int">  0 </int>                                         <!-- 3 immat -->
+        <int   n="4"  type="int">  0 </int>                                         <!-- 4 immat -->
+        <int   n="5"  type="int">  0 </int>                                         <!-- 5 immat -->
+        <int   n="6"  type="bool" alias="/smoke/active"> 0 </int>                   <!-- 6 start smoke -->
+        <int   n="7"  type="int"  alias="/smoke/particlepersec">0</int>             <!-- 7 particlepersec -->
+        <int   n="8"  alias="/controls/lighting/landing-lights">0</int>             <!-- 8 landing-lights -->
+        <int   n="9"  alias="/sim/model/lights/beacon/state"> false </int>          <!-- 9 strobe-lights -->
+        <float n="0"  alias="/sim/model/door-positions/crew/position-norm"/>
+        <float n="1"  alias="/sim/model/door-positions/passenger/position-norm"/>
+        <float n="2"  alias="/position/gear-agl-m">  0 </float>                     <!-- altitude for MP shadow -->
+        <float n="3"  alias="/position/altitude-ft"> 0 </float>                     <!-- altitude for Smoke/Trail -->
+        <float n="4"  alias="/engines/engine[0]/n1"/>
+        <float n="5"  alias="/engines/engine[1]/n1"/>
+        <float n="6"  alias="/controls/engines/engine[0]/throttle"/>
+        <float n="7"  alias="/controls/engines/engine[1]/throttle"/>
+        <float n="8"  alias="/engines/engine[0]/n2"/>
+        <float n="9"  alias="/engines/engine[1]/n2"/>
+        <float n="10" alias="/gear/gear[0]/wow/"/>
+        <float n="11" alias="/gear/gear[1]/wow/"/>
+        <float n="12" alias="/gear/gear[2]/wow/"/>
+        <float n="13" alias="/gear/gear[0]/rollspeed-ms"/>
+        <float n="14" alias="/gear/gear[1]/rollspeed-ms"/>
+        <float n="15" alias="/gear/gear[2]/rollspeed-ms"/>
+        <!-- For Bombable -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>
+        <string n="9" type="string" />
+      </generic>
+    </multiplay>
+    
+    <flaps include="flaps.xml"/>
+    
+    <help include="help.xml"/>
+
+    <menubar include="../Dialogs/alphajet-menu.xml"/>
+
+  </sim>
+
+  <input include="alphajet-keyboard.xml"/>
+  
+  <consumables include="consumables.xml"/>
+
+  <controls include="controls.xml"/>
+
+  <engines include="engines.xml"/>
+
+  <yasim include="yasim.xml"/>
+ 
+  <instrumentation include="instrumentation.xml"/>
+  
+  <nasal>
+    <doors>
+      <file>Aircraft/Alphajet/Nasal/doors.nas</file>
+    </doors>
+    <alphajet>
+      <file>Aircraft/Alphajet/Nasal/liveries.nas</file>
+      <file>Aircraft/Alphajet/Nasal/immat.nas</file>
+      <file>Aircraft/Alphajet/Nasal/light.nas</file>
+      <file>Aircraft/Alphajet/Nasal/millibar.nas</file>
+      <file>Aircraft/Alphajet/Models/Interior/Panel/Instruments/kcs55/kcs55.nas</file>
+        <script><![CDATA[
+          KCS55.new();
+        ]]></script>
+    </alphajet>
+    <engines>
+      <file>Aircraft/Alphajet/Nasal/generic-yasim-engine.nas</file>
+      <file>Aircraft/Alphajet/Nasal/engines-yasim.nas</file>
+    </engines>
+  </nasal>
+
+</PropertyList>

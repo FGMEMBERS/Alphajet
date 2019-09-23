@@ -4,6 +4,11 @@
 
   <path>alphajet.ac</path>
 
+  <!-- MP sound call -->
+  <sound>
+    <path>Aircraft/Alphajet/Sounds/mp-sound.xml</path>
+  </sound>
+  
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/Alphajet/Models/Liveries", 10);
@@ -13,8 +18,8 @@
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
       
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
+      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
+      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
     
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
@@ -155,11 +160,6 @@
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
   </animation>
 
   <effect>
@@ -195,84 +195,23 @@
     <object-name>porteA</object-name>
     <object-name>porteAG</object-name>
     <object-name>porteAD</object-name>
-    <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
-    </condition>
   </effect>
-
-  <effect>
-    <inherits-from>Effects/model-combined-deferred</inherits-from>
-    <object-name>fuselage</object-name>
-    <object-name>aile</object-name>
-    <object-name>aileronG</object-name>
-    <object-name>aileronD</object-name>
-    <object-name>voletG</object-name>
-    <object-name>voletD</object-name>
-    <object-name>profondeur</object-name>
-    <object-name>derive</object-name>
-    <object-name>direction</object-name>
-    <object-name>moteur</object-name>
-    <object-name>sortie</object-name>
-    <object-name>ailette</object-name>
-    <object-name>ailette2</object-name>
-    <object-name>ailette3</object-name>
-    <object-name>plaque</object-name>
-    <object-name>reservoir</object-name>
-    <object-name>tourverriere</object-name>
-    <object-name>tourverriere1</object-name>
-    <object-name>tourverriere2</object-name>
-    <object-name>supportslampes</object-name>
-    <object-name>freinG</object-name>
-    <object-name>freinD</object-name>
-    <object-name>porteG1</object-name>
-    <object-name>porteG2</object-name>
-    <object-name>porteG3</object-name>
-    <object-name>porteD1</object-name>
-    <object-name>porteD2</object-name>
-    <object-name>porteD3</object-name>
-    <object-name>porteA</object-name>
-    <object-name>porteAG</object-name>
-    <object-name>porteAD</object-name>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
-  </effect>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>verriere</object-name>
-    <object-name>verriere1</object-name>
-    <object-name>verriere2</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>verriere</object-name>
-    <object-name>verriere1</object-name>
-    <object-name>verriere2</object-name>
-    <object-name>lampeR</object-name>
-    <object-name>lampeV</object-name>
-    <object-name>lampesC</object-name>
-    <object-name>lampenoze</object-name>
-  </animation>
 
   <!-- working for Rembrandt -->
   <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
+    <inherits-from>Aircraft/Alphajet/Models/Effects/Glass/glass</inherits-from>
     <object-name>verriere</object-name>
     <object-name>verriere1</object-name>
     <object-name>verriere2</object-name>
-    <object-name>lampeR</object-name>
-    <object-name>lampeV</object-name>
-    <object-name>lampesC</object-name>
-    <object-name>lampenoze</object-name>
   </effect>
-
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>verriere</object-name>
+    <object-name>verriere1</object-name>
+    <object-name>verriere2</object-name>
+  </effect>
+  
   <!-- Effacement des roues une fois les trains rentrés -->
   <animation>
     <name>ToutLesTrains</name>
@@ -321,15 +260,8 @@
 
   <!-- Intérieur -->
   <model>
-    <name>Interieur</name>
     <path>Aircraft/Alphajet/Models/Interior/interior.xml</path>
   </model>
-
-  <!-- For Rembrandt -->
-  <animation>
-    <type>noshadow</type>
-    <object-name>Interieur</object-name>
-  </animation>
 
   <animation>
     <type>select</type>
@@ -363,6 +295,15 @@
     </offsets>
   </model>
 
+  <model>
+    <path>Aircraft/Alphajet/Models/Effects/trail/trailG.xml</path>
+    <offsets>
+      <x-m>  2.552 </x-m>
+      <y-m> -0.652 </y-m>
+      <z-m> -0.902 </z-m>
+    </offsets>
+  </model>
+  
   <!-- Droite -->
   <model>
     <path>Aircraft/Alphajet/Models/Effects/flammes/combustionD.xml</path>
@@ -382,6 +323,15 @@
     </offsets>
   </model>
 
+  <model>
+    <path>Aircraft/Alphajet/Models/Effects/trail/trailD.xml</path>
+    <offsets>
+      <x-m>  2.552 </x-m>
+      <y-m>  0.652 </y-m>
+      <z-m> -0.902 </z-m>
+    </offsets>
+  </model>
+  
   <!-- Gauche -->
   <model>
     <path>Aircraft/Alphajet/Models/Effects/tiptrail/tiptrail.xml</path>
@@ -844,12 +794,12 @@
     <property>surface-positions/rudder-pos-norm</property>
     <factor> 30 </factor>
     <axis>
-      <x1-m>  4.772 </x1-m>
-      <y1-m>  0.000 </y1-m>
-      <z1-m> -0.008 </z1-m>
-      <x2-m>  5.632 </x2-m>
-      <y2-m>  0.000 </y2-m>
-      <z2-m>  1.516 </z2-m>
+      <x1-m>  4.80090 </x1-m>
+      <y1-m>  0.00000 </y1-m>
+      <z1-m> -0.00776 </z1-m>
+      <x2-m>  5.65146 </x2-m>
+      <y2-m>  0.00000 </y2-m>
+      <z2-m>  1.51603 </z2-m>
     </axis>
   </animation>
 
@@ -858,14 +808,14 @@
     <type>rotate</type>
     <object-name>aileronG</object-name>
     <property>surface-positions/left-aileron-pos-norm</property>
-    <factor> -15 </factor>
+    <factor> 15 </factor>
     <axis>
-     <x1-m>  1.728 </x1-m>
-     <y1-m> -3.058 </y1-m>
-     <z1-m> -0.334 </z1-m>
-     <x2-m>  2.213 </x2-m>
-     <y2-m> -4.525 </y2-m>
-     <z2-m> -0.483 </z2-m>
+     <x1-m>  2.23329 </x1-m>
+     <y1-m> -4.53152 </y1-m>
+     <z1-m> -0.48383 </z1-m>
+     <x2-m>  1.74698 </x2-m>
+     <y2-m> -3.05844 </y2-m>
+     <z2-m> -0.33418 </z2-m>
     </axis>
   </animation>
 
@@ -873,14 +823,14 @@
    <type>rotate</type>
    <object-name>aileronD</object-name>
    <property>surface-positions/right-aileron-pos-norm</property>
-   <factor> -15 </factor>
+   <factor> 15 </factor>
    <axis>
-    <x1-m>  2.213 </x1-m>
-    <y1-m>  4.525 </y1-m>
-    <z1-m> -0.483 </z1-m>
-    <x2-m>  1.728 </x2-m>
-    <y2-m>  3.058 </y2-m>
-    <z2-m> -0.334 </z2-m>
+     <x1-m>  1.74698 </x1-m>
+     <y1-m>  3.05844 </y1-m>
+     <z1-m> -0.33418 </z1-m>
+     <x2-m>  2.23329 </x2-m>
+     <y2-m>  4.53152 </y2-m>
+     <z2-m> -0.48383 </z2-m>
    </axis>
   </animation>
 
@@ -994,10 +944,23 @@
   </animation>
 
   <animation>
+    <type>pick</type>
+    <object-name>CanopeAvant</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
     <type>rotate</type>
     <object-name>CanopeAvant</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
-    <interpolation>
+    <property>sim/model/door-positions/crew/position-norm</property>    <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
       <entry><ind> 1 </ind><dep> 76 </dep></entry>
     </interpolation>
@@ -1020,9 +983,23 @@
   </animation>
 
   <animation>
+    <type>pick</type>
+    <object-name>CanopeArriere</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
     <type>rotate</type>
     <object-name>CanopeArriere</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
       <entry><ind> 1 </ind><dep> 76 </dep></entry>
@@ -1126,7 +1103,6 @@
 
   <!-- Wing light cone -->
   <model>
-    <name>Taxi-Light</name>
     <path>Aircraft/Alphajet/Models/light/light-cone.xml</path>
     <offsets>
       <x-m>       -6.105 </x-m>

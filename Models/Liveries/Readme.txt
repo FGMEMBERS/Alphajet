@@ -22,3 +22,6 @@ These liveries were made by : Joao PICANCO 2010
 
 Thanks to him.
 
+djlynsee
+
+These liveries were made by : Emmanuel BARANGER 2017 (For Lynsée of Second Life)

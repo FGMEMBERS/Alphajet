@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<PropertyList>
+
+  <title>Alphajet E</title>
+  <line>______________________________________________</line>
+  <key>
+    <name>d</name>
+    <desc>Open/Close canopy</desc>
+  </key>
+  <key>
+    <name>S</name>
+    <desc>Start smoke</desc>
+  </key>
+  <key>
+    <name>u</name>
+    <desc>Stop smoke</desc>
+  </key>
+  <key>
+    <name>l</name>
+    <desc>Noze wheel lock</desc>
+  </key>
+  <key>
+    <name>L</name>
+    <desc>Landing lights On/Off</desc>
+  </key>
+  
+</PropertyList>
